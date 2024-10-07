@@ -1,7 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+
+
+const blogPosts = await getCollection('blog');
+const germanBlogPosts = blogPosts.filter((c) => c.id.includes('de'));
 ---
 
 <Base>
     Deutsch Blog Page
+
+    <h2>Blog posts</h2>
+    {   germanBlogPosts.map((blogPost) => (
+        <div>
+            <h2>{blogPost.data.title}</h2>
+            <p>{blogPost.data.author}</p>
+        </div>
+    ))}
 </Base>

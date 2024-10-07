@@ -1,0 +1,21 @@
+---
+import Base from '../../../layouts/Base.astro';
+
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('services');
+
+  const paths = pages.map(page => {
+    const [lang, ...slug] = page.id.split('/');
+    return { params: { lang, slug: slug.join('/') || undefined }, props: page };
+  });
+
+  return paths;
+}
+
+---
+
+<Base>
+    Deutsche Detail-Page für Service x
+</Base>

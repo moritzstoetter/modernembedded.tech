@@ -1,7 +1,18 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+
+const caseStudies = await getCollection('case-studies');
+const germanCaseStudies = caseStudies.find((c) => c.id.includes('de'))?.data?.caseStudies;
 ---
 
 <Base>
-    Deutsch Blog Page
+    Deutsch Fallstudien Page
+    <pre>{JSON.stringify({germanCaseStudies})}</pre>
+    {germanCaseStudies?.map((caseStudy) => (
+        <div>
+            <h2>{caseStudy.title}</h2>
+            <p>{caseStudy.description}</p>
+        </div>
+    ))}
 </Base>

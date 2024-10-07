@@ -1,0 +1,20 @@
+{
+  "caseStudies": [
+    {
+      "title": "Projekt bei Kunde 1",
+      "description": "Wir haben eine Softwarelösung für Kunde 1 entwickelt, die es dem Unternehmen ermöglicht, seine Geschäftsprozesse zu optimieren und die Effizienz zu steigern.",
+      "about": "Kunde 1 ist ein mittelständisches Unternehmen, das sich auf die Herstellung von Elektronikprodukten spezialisiert hat. Das Unternehmen hat uns beauftragt, eine Softwarelösung zu entwickeln, die es ihm ermöglicht, seine Geschäftsprozesse zu optimieren und die Effizienz zu steigern.",
+      "challenge": "Die größte Herausforderung bei diesem Projekt bestand darin, die verschiedenen Geschäftsprozesse von Kunde 1 zu verstehen und eine Softwarelösung zu entwickeln, die diese Prozesse effizient unterstützt.",
+      "deliveredValue": "Unsere Softwarelösung hat es Kunde 1 ermöglicht, seine Geschäftsprozesse zu optimieren und die Effizienz zu steigern. Das Unternehmen konnte dadurch Zeit und Ressourcen sparen und seine Wettbewerbsfähigkeit stärken.",
+      "product": "Unsere Softwarelösung für Kunde 1 umfasst verschiedene Module, die es dem Unternehmen ermöglichen, seine Geschäftsprozesse effizient zu verwalten. Dazu gehören ein Bestellungs- und Lagerverwaltungssystem, ein Kundenverwaltungssystem und ein Berichterstellungssystem.",
+      "tech": ["Python", "C++", "Django", "React"],
+      "testimonials": [
+        {
+          "name": "Max Mustermann",
+          "image": "../assets/max_mustermann.jpg",
+          "quote": "Die Softwarelösung von Firma X hat uns geholfen, unsere Geschäftsprozesse zu optimieren und die Effizienz zu steigern. Wir sind sehr zufrieden mit der Zusammenarbeit und können Firma X wärmstens weiterempfehlen."
+        }
+      ]
+    }
+  ]
+}

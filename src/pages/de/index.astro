@@ -1,7 +1,19 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+
+const services = await getCollection('services');
+const germanServices = services.find((s) => s.id.includes('de'))?.data?.services;
 ---
 
 <Base>
-    Deutsch Home Page
+    Deutsche Home Page 
+    {
+        germanServices?.map((service) => (
+            <div>
+                <h2>{service.title}</h2>
+                <p>{service.description}</p>
+            </div>
+        ))
+    }
 </Base>

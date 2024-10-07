@@ -4,14 +4,25 @@ import { getLangFromUrl } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 ---
-<html lang={lang}>
+<html lang={lang} class="dark">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <title>Astro</title>
+        <!-- Check for dark mode to avoid light/dark theme blinking -->
+        <script is:inline>
+            if (
+              localStorage.theme === 'dark' ||
+              (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ) {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+        </script>
     </head>
-    <body>
+    <body class="bg-backgroundLight dark:bg-backgroundDark">
         <Nav />
         <slot />
     </body>
