@@ -13,5 +13,5 @@ export default defineConfig({
       prefixDefaultLocale: true,
     },
   },
-  site: "https://www.moritzstoetter.dev/",
+  site: "https://www.new.moritzstoetter.dev/",
 });
