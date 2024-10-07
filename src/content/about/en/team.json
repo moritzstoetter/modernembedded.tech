@@ -1,0 +1,14 @@
+{
+  "members": [
+    {
+      "name": "Max Mustermann",
+      "description": "Max Mustermann is the founder and CEO of Company X. He has many years of experience in software development and specializes in the development of web applications and mobile applications.",
+      "image": "max-mustermann.jpg"
+    },
+    {
+      "name": "Erika Musterfrau",
+      "description": "Erika Musterfrau is the head of the development team at Company X. She has extensive experience in software development and specializes in the development of web applications and mobile applications.",
+      "image": "erika-musterfrau.jpg"
+    }
+  ]
+}

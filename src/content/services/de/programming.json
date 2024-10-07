@@ -1,0 +1,17 @@
+{
+  "title": "Programmierung",
+  "description": "Wir entwickeln Softwarelösungen für Unternehmen und Privatpersonen. Unsere Schwerpunkte liegen in der Webentwicklung und der Entwicklung von mobilen Anwendungen.",
+  "tech": [
+    {
+      "name": "C++",
+      "description": "C++ ist eine der am weitesten verbreiteten Programmiersprachen und wird für die Entwicklung von Betriebssystemen, Treibern und Spielen verwendet.",
+      "experience": "Advanced"
+    },
+    {
+      "name": "Python",
+      "description": "Python ist eine der beliebtesten Programmiersprachen und wird für Webentwicklung, Datenanalyse und künstliche Intelligenz verwendet.",
+      "experience": "Advanced"
+    }
+  ],
+  "tags": ["python", "c++", "progamming"]
+}

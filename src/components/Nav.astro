@@ -1,0 +1,40 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguagePicker from './LanguagePicker.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<ul>
+    <li>
+        <a href={`/${lang}/home/`}>
+          {t('nav.home')}
+        </a>
+    </li>
+    <li>
+        <a href={`/${lang}/services/`}>
+          {t('nav.services')}
+        </a>
+    </li>
+    <li>
+        <a href={`/${lang}/case-studies/`}>
+          {t('nav.caseStudies')}
+        </a>
+    </li>
+    <li>
+        <a href={`/${lang}/blog/`}>
+          {t('nav.blog')}
+        </a>
+    </li>
+    <li>
+        <a href={`/${lang}/contact/`}>
+          {t('nav.contact')}
+        </a>
+    </li>
+    <li>
+        <a href={`/${lang}/about/`}>
+          {t('nav.about')}
+        </a>
+    </li>
+    <LanguagePicker />
+</ul>
