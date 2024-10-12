@@ -15,7 +15,26 @@
           "experience": "Advanced"
         }
       ],
+      "image": "../assets/programming.jpg",
       "tags": ["python", "c++", "programming"]
+    },
+    {
+      "title": "DevOps",
+      "description": "We offer DevOps services for companies looking to optimize and automate their software development processes.",
+      "tech": [
+        {
+          "name": "Docker",
+          "description": "Docker is a container platform that allows developers to run applications in isolated environments.",
+          "experience": "Advanced"
+        },
+        {
+          "name": "Kubernetes",
+          "description": "Kubernetes is an open-source system for automating the deployment, scaling, and management of containerized applications.",
+          "experience": "Advanced"
+        }
+      ],
+      "image": "../assets/dev-ops.jpg",
+      "tags": ["docker", "kubernetes", "devops"]
     }
   ]
 }

@@ -7,12 +7,27 @@ span,
 div,
 ul,
 li,
-a,
+a {
+  @apply text-textLight dark:text-textDark;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply text-textLight dark:text-textDark;
+  @apply text-primaryLight dark:text-primaryDark;
+}
+
+h1 {
+  @apply mb-4 text-xl sm:text-2xl lg:text-3xl;
+}
+
+h2 {
+  @apply text-lg sm:text-xl lg:text-2xl;
+}
+
+h3 {
+  @apply text-base sm:text-lg lg:text-xl;
 }

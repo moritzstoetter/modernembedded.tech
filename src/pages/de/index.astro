@@ -1,19 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
-import Base from '../../layouts/Base.astro';
+import { getCollection } from "astro:content";
+import Service from "../../components/Service.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Base from "../../layouts/Base.astro";
 
-const services = await getCollection('services');
-const germanServices = services.find((s) => s.id.includes('de'))?.data?.services;
+const services = await getCollection("services");
+const germanServices = services.find((s) => s.id.includes("de"))?.data
+  ?.services;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Base>
-    Deutsche Home Page 
-    {
-        germanServices?.map((service) => (
-            <div>
-                <h2>{service.title}</h2>
-                <p>{service.description}</p>
-            </div>
-        ))
-    }
+  <h1>{t("services.title")}</h1>
+  <div class="flex flex-col gap-8">
+    {germanServices?.map((service) => <Service service={service} />)}
+  </div>
 </Base>

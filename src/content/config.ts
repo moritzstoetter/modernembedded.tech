@@ -20,7 +20,7 @@ const aboutCollection = defineCollection({
         name: z.string(),
         description: z.string(),
         image: z.string(),
-      })
+      }),
     ),
   }),
 });
@@ -43,31 +43,33 @@ const caseStudiesCollection = defineCollection({
               name: z.string(),
               image: image(),
               quote: z.string(),
-            })
+            }),
           ),
-        })
+        }),
       ),
     }),
 });
 
 const servicesCollection = defineCollection({
   type: "data",
-  schema: z.object({
-    services: z.array(
-      z.object({
-        title: z.string(),
-        description: z.string(),
-        tech: z.array(
-          z.object({
-            name: z.string(),
-            description: z.string(),
-            experience: z.string(),
-          })
-        ),
-        tags: z.array(z.string()),
-      })
-    ),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      services: z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+          tech: z.array(
+            z.object({
+              name: z.string(),
+              description: z.string(),
+              experience: z.string(),
+            }),
+          ),
+          image: image(),
+          tags: z.array(z.string()),
+        }),
+      ),
+    }),
 });
 
 export const collections = {

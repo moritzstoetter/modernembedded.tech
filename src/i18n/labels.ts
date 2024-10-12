@@ -18,6 +18,7 @@ export const labels = {
       privacy: "Privacy Policy",
     },
     services: {
+      title: "Services",
       testimonials: "What our customers say",
     },
     caseStudies: {
@@ -49,6 +50,7 @@ export const labels = {
       privacy: "Datenschutz",
     },
     services: {
+      title: "Dienstleistungen und Services",
       testimonials: "Was unsere Kunden sagen",
     },
     caseStudies: {
