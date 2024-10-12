@@ -1,37 +1,43 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import LanguagePicker from './LanguagePicker.astro';
-import ThemeIcon from './ThemeIcon.astro';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import BurgerMenu from "./BurgerMenu.astro";
+import LanguagePicker from "./LanguagePicker.astro";
+import NavList from "./NavList.astro";
+import ThemeIcon from "./ThemeIcon.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<ul>
-    <li>
-        <a href={`/${lang}/`}>
-          {t('nav.home')}
-        </a>
-    </li>
-    <li>
-        <a href={`/${lang}/case-studies/`}>
-          {t('nav.caseStudies')}
-        </a>
-    </li>
-    <li>
-        <a href={`/${lang}/blog/`}>
-          {t('nav.blog')}
-        </a>
-    </li>
-    <li>
-        <a href={`/${lang}/contact/`}>
-          {t('nav.contact')}
-        </a>
-    </li>
-    <li>
-        <a href={`/${lang}/about/`}>
-          {t('nav.about')}
-        </a>
-    </li>
-    <LanguagePicker />
-    <ThemeIcon />
-</ul>
+
+<div
+  class="flex flex-col px-6 py-4 mx-6 my-4 bg-white border dark:bg-backgroundDark rounded-3xl border-primaryLight/10 dark:border-neutral-700/40"
+>
+  <div class="flex items-center justify-between">
+    <a href="/">Moritz Stötter Logo</a>
+    <div class="flex items-center gap-4">
+      <div class="hidden md:block">
+        <NavList alignment="horizontal" />
+      </div>
+      <div class="flex block item-center md:hidden">
+        <BurgerMenu />
+      </div>
+      <LanguagePicker />
+      <ThemeIcon />
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden mt-4 md:hidden">
+    <NavList alignment="vertical" />
+  </div>
+</div>
+
+<script>
+  let mobileMenuOpen = false;
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  document.addEventListener("toggleMenu", () => {
+    mobileMenuOpen = !mobileMenuOpen;
+    if (mobileMenu) {
+      mobileMenu.classList.toggle("hidden", !mobileMenuOpen);
+    }
+  });
+</script>

@@ -1,0 +1,61 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { alignment } = Astro.props; // horizontal or vertical
+---
+
+<ul
+  class=`${alignment === "horizontal" ? "flex-row items-center" : "flex-col"} flex  gap-4 text-sm"`
+>
+  <li>
+    <a
+      href={`/${lang}/`}
+      class={Astro.url.pathname === `/${lang}/`
+        ? "text-secondaryLight dark:text-secondaryDark"
+        : ""}
+    >
+      {t("nav.home")}
+    </a>
+  </li>
+  <li>
+    <a
+      href={`/${lang}/case-studies/`}
+      class={Astro.url.pathname === `/${lang}/case-studies/`
+        ? "text-secondaryLight dark:text-secondaryDark"
+        : ""}
+    >
+      {t("nav.caseStudies")}
+    </a>
+  </li>
+  <li>
+    <a
+      href={`/${lang}/blog/`}
+      class={Astro.url.pathname === `/${lang}/blog/`
+        ? "text-secondaryLight dark:text-secondaryDark"
+        : ""}
+    >
+      {t("nav.blog")}
+    </a>
+  </li>
+  <li>
+    <a
+      href={`/${lang}/contact/`}
+      class={Astro.url.pathname === `/${lang}/contact/`
+        ? "text-secondaryLight dark:text-secondaryDark"
+        : ""}
+    >
+      {t("nav.contact")}
+    </a>
+  </li>
+  <li>
+    <a
+      href={`/${lang}/about/`}
+      class={Astro.url.pathname === `/${lang}/about/` ? "text-secondary" : ""}
+    >
+      {t("nav.about")}
+    </a>
+  </li>
+</ul>

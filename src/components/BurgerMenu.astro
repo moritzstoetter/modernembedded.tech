@@ -1,0 +1,25 @@
+<button id="burger-menu">
+  <svg
+    class="cursor-pointer h-[1.25rem] w-[1.25rem] flex-shrink-0 hs-collapse-open:hidden"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <line x1="3" x2="21" y1="6" y2="6"></line>
+    <line x1="3" x2="21" y1="12" y2="12"></line>
+    <line x1="3" x2="21" y1="18" y2="18"></line>
+  </svg>
+</button>
+
+<script>
+  const burgerMenu = document.getElementById("burger-menu");
+  burgerMenu?.addEventListener("click", () => {
+    const event = new CustomEvent("toggleMenu");
+    document.dispatchEvent(event);
+  });
+</script>
