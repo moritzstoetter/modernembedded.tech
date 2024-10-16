@@ -27,27 +27,20 @@ const aboutCollection = defineCollection({
 
 const caseStudiesCollection = defineCollection({
   type: "data",
-  schema: ({ image }) =>
-    z.object({
-      caseStudies: z.array(
-        z.object({
-          title: z.string(),
-          description: z.string(),
-          about: z.string(),
-          challenge: z.string(),
-          deliveredValue: z.string(),
-          product: z.string(),
-          tech: z.array(z.string()),
-          testimonials: z.array(
-            z.object({
-              name: z.string(),
-              image: image(),
-              quote: z.string(),
-            }),
-          ),
-        }),
-      ),
-    }),
+  schema: z.object({
+    caseStudies: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string(),
+        about: z.string(),
+        challenge: z.string(),
+        deliveredValue: z.string(),
+        product: z.string(),
+        tech: z.array(z.string()),
+        testimonials: z.array(z.number()),
+      }),
+    ),
+  }),
 });
 
 const servicesCollection = defineCollection({
@@ -72,9 +65,25 @@ const servicesCollection = defineCollection({
     }),
 });
 
+const testimonialsCollection = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      testimonials: z.array(
+        z.object({
+          identifier: z.number(),
+          name: z.string(),
+          quote: z.string(),
+          image: image(),
+        }),
+      ),
+    }),
+});
+
 export const collections = {
   blog: blogCollection,
   about: aboutCollection,
   "case-studies": caseStudiesCollection,
   services: servicesCollection,
+  testimonials: testimonialsCollection,
 };

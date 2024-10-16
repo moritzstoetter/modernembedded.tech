@@ -8,13 +8,7 @@
       "deliveredValue": "Unsere Softwarelösung hat es Kunde 1 ermöglicht, seine Geschäftsprozesse zu optimieren und die Effizienz zu steigern. Das Unternehmen konnte dadurch Zeit und Ressourcen sparen und seine Wettbewerbsfähigkeit stärken.",
       "product": "Unsere Softwarelösung für Kunde 1 umfasst verschiedene Module, die es dem Unternehmen ermöglichen, seine Geschäftsprozesse effizient zu verwalten. Dazu gehören ein Bestellungs- und Lagerverwaltungssystem, ein Kundenverwaltungssystem und ein Berichterstellungssystem.",
       "tech": ["Python", "C++", "Django", "React"],
-      "testimonials": [
-        {
-          "name": "Max Mustermann",
-          "image": "../assets/max_mustermann.jpg",
-          "quote": "Die Softwarelösung von Firma X hat uns geholfen, unsere Geschäftsprozesse zu optimieren und die Effizienz zu steigern. Wir sind sehr zufrieden mit der Zusammenarbeit und können Firma X wärmstens weiterempfehlen."
-        }
-      ]
+      "testimonials": [1, 2]
     }
   ]
 }

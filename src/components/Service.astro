@@ -1,19 +1,20 @@
 ---
 import { Image } from "astro:assets";
+import Box from "./Box.astro";
 
 const { service } = Astro.props;
 ---
 
-<div
-  class="grid grid-cols-1 gap-8 p-8 bg-white border md:grid-cols-2 dark:bg-backgroundDark rounded-3xl border-primaryLight/10 dark:border-neutral-700/40"
->
-  <Image
-    src={service.image}
-    alt={service.title}
-    class="object-cover w-full h-32 sm:h-64 rounded-2xl"
-  />
-  <div class="flex flex-col gap-4">
-    <h2>{service.title}</h2>
-    <p>{service.description}</p>
+<Box>
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <Image
+      src={service.image}
+      alt={service.title}
+      class="object-cover w-full h-32 sm:h-64 rounded-2xl"
+    />
+    <div class="flex flex-col gap-4">
+      <h2>{service.title}</h2>
+      <p>{service.description}</p>
+    </div>
   </div>
-</div>
+</Box>
