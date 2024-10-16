@@ -14,6 +14,8 @@ export const labels = {
       blog: "Blog",
       about: "About",
       contact: "Contact",
+    },
+    footer: {
       imprint: "Imprint",
       privacy: "Privacy Policy",
     },
@@ -46,6 +48,8 @@ export const labels = {
       blog: "Blog",
       about: "Über uns",
       contact: "Kontakt",
+    },
+    footer: {
       imprint: "Impressum",
       privacy: "Datenschutz",
     },

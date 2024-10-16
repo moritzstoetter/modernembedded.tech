@@ -1,0 +1,29 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div
+  class="flex flex-col px-6 py-4 mx-6 my-4 bg-white border dark:bg-backgroundDark rounded-3xl border-primaryLight/10 dark:border-neutral-700/40"
+>
+  <div class="flex items-center justify-center gap-4">
+    <a
+      class={`${
+        Astro.url.pathname === `/${lang}/imprint`
+          ? "text-secondaryLight dark:text-secondaryDark"
+          : ""
+      }`}
+      href={`/${lang}/imprint`}>{t("footer.imprint")}</a
+    >
+    <a
+      class={`${
+        Astro.url.pathname === `/${lang}/privacy`
+          ? "text-secondaryLight dark:text-secondaryDark"
+          : ""
+      }`}
+      href={`/${lang}/privacy`}>{t("footer.privacy")}</a
+    >
+  </div>
+</div>

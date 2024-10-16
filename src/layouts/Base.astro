@@ -1,7 +1,8 @@
 ---
-import Nav from '../components/Nav.astro';
-import { getLangFromUrl } from '../i18n/utils';
-import '../base.css';
+import Nav from "../components/Nav.astro";
+import { getLangFromUrl } from "../i18n/utils";
+import "../base.css";
+import Footer from "../components/Footer.astro";
 
 const lang = getLangFromUrl(Astro.url);
 ---
@@ -15,20 +16,25 @@ const lang = getLangFromUrl(Astro.url);
     <!-- Check for dark mode to avoid light/dark theme blinking -->
     <script is:inline>
       if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
-        document.documentElement.classList.add('dark');
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.remove("dark");
       }
     </script>
   </head>
-  <body class="bg-backgroundLight dark:bg-backgroundDark">
-    <Nav />
-    <div class="mx-6">
-      <slot />
+  <body
+    class="flex flex-col justify-between min-h-screen bg-backgroundLight dark:bg-backgroundDark"
+  >
+    <div>
+      <Nav />
+      <main class="mx-6">
+        <slot />
+      </main>
     </div>
+    <Footer />
   </body>
 </html>
