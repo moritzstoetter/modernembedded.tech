@@ -8,13 +8,7 @@
       "deliveredValue": "Our software solution has enabled Client 1 to optimize its business processes and increase efficiency. This allowed the company to save time and resources and strengthen its competitiveness.",
       "product": "Our software solution for Client 1 includes various modules that enable the company to efficiently manage its business processes. These include an order and inventory management system, a customer management system, and a reporting system.",
       "tech": ["Python", "C++", "Django", "React"],
-      "testimonials": [
-        {
-          "name": "Max Mustermann",
-          "image": "../assets/max_mustermann.jpg",
-          "quote": "The software solution from Company X has helped us optimize our business processes and increase efficiency. We are very satisfied with the collaboration and can highly recommend Company X."
-        }
-      ]
+      "testimonials": [1, 2]
     }
   ]
 }
