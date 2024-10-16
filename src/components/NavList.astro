@@ -53,7 +53,9 @@ const { alignment } = Astro.props; // horizontal or vertical
   <li>
     <a
       href={`/${lang}/about/`}
-      class={Astro.url.pathname === `/${lang}/about/` ? "text-secondary" : ""}
+      class={Astro.url.pathname === `/${lang}/about/`
+        ? "text-secondaryLight dark:text-secondaryDark"
+        : ""}
     >
       {t("nav.about")}
     </a>
