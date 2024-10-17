@@ -1,18 +1,21 @@
 ---
-import { getCollection } from 'astro:content';
-import Base from '../../layouts/Base.astro';
+import { getCollection } from "astro:content";
+import { idIsOfLanguage } from "../../i18n/utils";
+import Base from "../../layouts/Base.astro";
 
-const caseStudies = await getCollection('case-studies');
-const germanCaseStudies = caseStudies.find((c) => c.id.includes('de'))?.data?.caseStudies;
+const caseStudies = await getCollection("case-studies");
+const germanCaseStudies = caseStudies.filter((c) => idIsOfLanguage(c.id, "de"));
 ---
 
 <Base>
-    Deutsch Fallstudien Page
-    <pre>{JSON.stringify({germanCaseStudies})}</pre>
-    {germanCaseStudies?.map((caseStudy) => (
-        <div>
-            <h2>{caseStudy.title}</h2>
-            <p>{caseStudy.description}</p>
-        </div>
-    ))}
+  Deutsch Fallstudien Page
+  <pre>{JSON.stringify({germanCaseStudies})}</pre>
+  {
+    germanCaseStudies?.map(({ data }) => (
+      <div>
+        <h2>{data.title}</h2>
+        <p>{data.description}</p>
+      </div>
+    ))
+  }
 </Base>

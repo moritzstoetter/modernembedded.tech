@@ -12,73 +12,130 @@ const blogCollection = defineCollection({
     }),
 });
 
+export interface BlogPost {
+  title: string;
+  image: {
+    src: string;
+    width: number;
+    height: number;
+    format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+  };
+  imageAlt: string;
+  author: string;
+  date: Date;
+}
+
 const aboutCollection = defineCollection({
   type: "data",
-  schema: z.object({
-    members: z.array(
-      z.object({
-        name: z.string(),
-        description: z.string(),
-        image: z.string(),
-      }),
-    ),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      members: z.array(
+        z.object({
+          name: z.string(),
+          description: z.string(),
+          image: image(),
+        }),
+      ),
+    }),
 });
+
+export interface About {
+  members: {
+    name: string;
+    description: string;
+    image: {
+      src: string;
+      width: number;
+      height: number;
+      format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+    };
+  }[];
+}
 
 const caseStudiesCollection = defineCollection({
   type: "data",
   schema: z.object({
-    caseStudies: z.array(
-      z.object({
-        title: z.string(),
-        description: z.string(),
-        about: z.string(),
-        challenge: z.string(),
-        deliveredValue: z.string(),
-        product: z.string(),
-        tech: z.array(z.string()),
-        testimonials: z.array(z.number()),
-      }),
-    ),
+    title: z.string(),
+    description: z.string(),
+    about: z.string(),
+    challenge: z.string(),
+    deliveredValue: z.string(),
+    product: z.string(),
+    tech: z.array(z.string()),
+    testimonials: z.array(z.number()),
   }),
 });
+
+export interface CaseStudy {
+  title: string;
+  description: string;
+  about: string;
+  challenge: string;
+  deliveredValue: string;
+  product: string;
+  tech: string[];
+  testimonials: number[];
+}
 
 const servicesCollection = defineCollection({
   type: "data",
   schema: ({ image }) =>
     z.object({
-      services: z.array(
+      slug: z.string(),
+      title: z.string(),
+      description: z.string(),
+      tech: z.array(
         z.object({
-          title: z.string(),
+          name: z.string(),
           description: z.string(),
-          tech: z.array(
-            z.object({
-              name: z.string(),
-              description: z.string(),
-              experience: z.string(),
-            }),
-          ),
-          image: image(),
-          tags: z.array(z.string()),
+          experience: z.string(),
         }),
       ),
+      image: image(),
+      tags: z.array(z.string()),
     }),
 });
+
+export interface Service {
+  slug: string;
+  title: string;
+  description: string;
+  tech: {
+    name: string;
+    description: string;
+    experience: string;
+  }[];
+  image: {
+    src: string;
+    width: number;
+    height: number;
+    format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+  };
+  tags: string[];
+}
 
 const testimonialsCollection = defineCollection({
   type: "data",
   schema: ({ image }) =>
     z.object({
-      testimonials: z.array(
-        z.object({
-          identifier: z.number(),
-          name: z.string(),
-          quote: z.string(),
-          image: image(),
-        }),
-      ),
+      identifier: z.number(),
+      name: z.string(),
+      quote: z.string(),
+      image: image(),
     }),
 });
+
+export interface Testimonial {
+  identifier: number;
+  name: string;
+  quote: string;
+  image: {
+    src: string;
+    width: number;
+    height: number;
+    format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+  };
+}
 
 export const collections = {
   blog: blogCollection,

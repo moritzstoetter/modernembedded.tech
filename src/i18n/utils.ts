@@ -17,3 +17,7 @@ export function useTranslations(lang: keyof typeof labels) {
     return getNestedTranslation(labels[defaultLang], key);
   };
 }
+
+export const idIsOfLanguage = (id: string, lang: string) => {
+  return id.indexOf(`${lang}/`) > -1;
+};

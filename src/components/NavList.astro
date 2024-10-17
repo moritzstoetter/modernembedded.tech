@@ -4,11 +4,11 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const { alignment } = Astro.props; // horizontal or vertical
+const alignment: "horizontal" | "vertical" = Astro.props.alignment;
 ---
 
 <ul
-  class=`${alignment === "horizontal" ? "flex-row items-center" : "flex-col"} flex  gap-4 text-sm"`
+  class=`${alignment === "horizontal" ? "flex-row items-center" : "flex-col"} flex gap-4 text-sm"`
 >
   <li>
     <a

@@ -1,20 +1,22 @@
 ---
-import { getCollection } from 'astro:content';
-import Base from '../../layouts/Base.astro';
+import { getCollection } from "astro:content";
+import { idIsOfLanguage } from "../../i18n/utils";
+import Base from "../../layouts/Base.astro";
 
-
-const blogPosts = await getCollection('blog');
-const germanBlogPosts = blogPosts.filter((c) => c.id.includes('de'));
+const blogPosts = await getCollection("blog");
+const germanBlogPosts = blogPosts.filter((c) => idIsOfLanguage(c.id, "de"));
 ---
 
 <Base>
-    Deutsch Blog Page
+  Deutsch Blog Page
 
-    <h2>Blog posts</h2>
-    {   germanBlogPosts.map((blogPost) => (
-        <div>
-            <h2>{blogPost.data.title}</h2>
-            <p>{blogPost.data.author}</p>
-        </div>
-    ))}
+  <h2>Blog posts</h2>
+  {
+    germanBlogPosts.map((blogPost) => (
+      <div>
+        <h2>{blogPost.data.title}</h2>
+        <p>{blogPost.data.author}</p>
+      </div>
+    ))
+  }
 </Base>

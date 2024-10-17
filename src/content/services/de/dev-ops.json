@@ -1,0 +1,19 @@
+{
+  "slug": "dev-ops",
+  "title": "DevOps",
+  "description": "Wir bieten DevOps-Services für Unternehmen an, die ihre Softwareentwicklungsprozesse optimieren und automatisieren möchten.",
+  "tech": [
+    {
+      "name": "Docker",
+      "description": "Docker ist eine Container-Plattform, die es Entwicklern ermöglicht, Anwendungen in isolierten Umgebungen auszuführen.",
+      "experience": "Advanced"
+    },
+    {
+      "name": "Kubernetes",
+      "description": "Kubernetes ist ein Open-Source-System zur Automatisierung der Bereitstellung, Skalierung und Verwaltung von Container-Anwendungen.",
+      "experience": "Advanced"
+    }
+  ],
+  "image": "../assets/dev-ops.jpg",
+  "tags": ["docker", "kubernetes", "devops"]
+}

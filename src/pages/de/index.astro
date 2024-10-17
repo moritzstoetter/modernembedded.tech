@@ -2,17 +2,20 @@
 import { getCollection } from "astro:content";
 import Service from "../../components/Service.astro";
 import Testimonial from "../../components/Testimonial.astro";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import {
+  getLangFromUrl,
+  idIsOfLanguage,
+  useTranslations,
+} from "../../i18n/utils";
 import Base from "../../layouts/Base.astro";
 
 const services = await getCollection("services");
 const testimonials = await getCollection("testimonials");
 
-const germanServices = services.find((s) => s.id.includes("de"))?.data
-  ?.services;
-
-const germanTestimonials = testimonials.find((t) => t.id.includes("de"))?.data
-  ?.testimonials;
+const germanServices = services.filter((s) => idIsOfLanguage(s.id, "de"));
+const germanTestimonials = testimonials.filter((t) =>
+  idIsOfLanguage(t.id, "de"),
+);
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -21,13 +24,13 @@ const t = useTranslations(lang);
 <Base>
   <h1>{t("services.title")}</h1>
   <div class="flex flex-col gap-8">
-    {germanServices?.map((service) => <Service service={service} />)}
+    {germanServices?.map((service) => <Service service={service.data} />)}
   </div>
   <h1 class="mt-4">{t("services.testimonials")}</h1>
   <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
     {
       germanTestimonials?.map((testimonial) => (
-        <Testimonial testimonial={testimonial} />
+        <Testimonial testimonial={testimonial.data} />
       ))
     }
   </div>
