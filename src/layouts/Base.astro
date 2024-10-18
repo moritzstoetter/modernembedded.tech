@@ -27,11 +27,11 @@ const lang = getLangFromUrl(Astro.url);
     </script>
   </head>
   <body
-    class="flex flex-col justify-between min-h-screen bg-backgroundLight dark:bg-backgroundDark"
+    class="flex flex-col justify-between max-w-5xl min-h-screen mx-4 lg:mx-auto bg-backgroundLight dark:bg-backgroundDark"
   >
     <div>
       <Nav />
-      <main class="mx-6">
+      <main>
         <slot />
       </main>
     </div>

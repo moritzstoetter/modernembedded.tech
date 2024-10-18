@@ -1,0 +1,18 @@
+---
+const { href } = Astro.props;
+---
+
+{
+  href ? (
+    <a
+      class="bg-white border cursor-pointer dark:bg-backgroundDarker rounded-3xl border-primaryLight/10 dark:border-neutral-700/40"
+      href={href}
+    >
+      <slot />
+    </a>
+  ) : (
+    <div class="bg-white border dark:bg-backgroundDarker rounded-3xl border-primaryLight/10 dark:border-neutral-700/40">
+      <slot />
+    </div>
+  )
+}

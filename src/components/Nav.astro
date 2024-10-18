@@ -1,16 +1,16 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import BurgerMenu from "./BurgerMenu.astro";
-import LanguagePicker from "./LanguagePicker.astro";
+import BurgerMenu from "./ui/BurgerMenu.astro";
+import LanguagePicker from "./ui/LanguagePicker.astro";
 import NavList from "./NavList.astro";
-import ThemeIcon from "./ThemeIcon.astro";
+import ThemeIcon from "./ui/ThemeIcon.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <div
-  class="flex flex-col px-6 py-4 mx-6 my-4 bg-white border dark:bg-backgroundDark rounded-3xl border-primaryLight/10 dark:border-neutral-700/40"
+  class="flex flex-col px-8 py-6 mt-8 bg-white border dark:bg-backgroundDarker rounded-3xl border-primaryLight/10 dark:border-neutral-700/40"
 >
   <div class="flex items-center justify-between">
     <a href="/">Moritz Stötter Logo</a>

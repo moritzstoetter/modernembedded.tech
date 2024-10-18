@@ -13,9 +13,11 @@ const alignment: "horizontal" | "vertical" = Astro.props.alignment;
   <li>
     <a
       href={`/${lang}/`}
-      class={Astro.url.pathname === `/${lang}/`
-        ? "text-secondaryLight dark:text-secondaryDark"
-        : ""}
+      class={`text-lg ${
+        Astro.url.pathname === `/${lang}/`
+          ? "text-primaryLight dark:text-primaryDark"
+          : ""
+      }`}
     >
       {t("nav.home")}
     </a>
@@ -23,9 +25,11 @@ const alignment: "horizontal" | "vertical" = Astro.props.alignment;
   <li>
     <a
       href={`/${lang}/case-studies/`}
-      class={Astro.url.pathname === `/${lang}/case-studies/`
-        ? "text-secondaryLight dark:text-secondaryDark"
-        : ""}
+      class={`text-lg ${
+        Astro.url.pathname === `/${lang}/case-studies/`
+          ? "text-primaryLight dark:text-primaryDark"
+          : ""
+      }`}
     >
       {t("nav.caseStudies")}
     </a>
@@ -33,9 +37,11 @@ const alignment: "horizontal" | "vertical" = Astro.props.alignment;
   <li>
     <a
       href={`/${lang}/blog/`}
-      class={Astro.url.pathname === `/${lang}/blog/`
-        ? "text-secondaryLight dark:text-secondaryDark"
-        : ""}
+      class={`text-lg ${
+        Astro.url.pathname === `/${lang}/blog/`
+          ? "text-primaryLight dark:text-primaryDark"
+          : ""
+      }`}
     >
       {t("nav.blog")}
     </a>
@@ -43,9 +49,11 @@ const alignment: "horizontal" | "vertical" = Astro.props.alignment;
   <li>
     <a
       href={`/${lang}/contact/`}
-      class={Astro.url.pathname === `/${lang}/contact/`
-        ? "text-secondaryLight dark:text-secondaryDark"
-        : ""}
+      class={`text-lg ${
+        Astro.url.pathname === `/${lang}/contact/`
+          ? "text-primaryLight dark:text-primaryDark"
+          : ""
+      }`}
     >
       {t("nav.contact")}
     </a>
@@ -53,9 +61,11 @@ const alignment: "horizontal" | "vertical" = Astro.props.alignment;
   <li>
     <a
       href={`/${lang}/about/`}
-      class={Astro.url.pathname === `/${lang}/about/`
-        ? "text-secondaryLight dark:text-secondaryDark"
-        : ""}
+      class={`text-lg ${
+        Astro.url.pathname === `/${lang}/about/`
+          ? "text-primaryLight dark:text-primaryDark"
+          : ""
+      }`}
     >
       {t("nav.about")}
     </a>

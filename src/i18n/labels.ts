@@ -15,6 +15,14 @@ export const labels = {
       about: "About",
       contact: "Contact",
     },
+    home: {
+      hero: {
+        title: "We build digital products",
+        subtitle:
+          "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
+        cta: "Get in touch",
+      },
+    },
     footer: {
       imprint: "Imprint",
       privacy: "Privacy Policy",
@@ -48,6 +56,14 @@ export const labels = {
       blog: "Blog",
       about: "Über uns",
       contact: "Kontakt",
+    },
+    home: {
+      hero: {
+        title: "Wir entwickeln digitale Produkte",
+        subtitle:
+          "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
+        cta: "Kontaktieren Sie uns",
+      },
     },
     footer: {
       imprint: "Impressum",
