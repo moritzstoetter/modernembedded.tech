@@ -58,8 +58,8 @@ function validateTranslations() {
   });
 
   if (errors.length > 0) {
-    console.error("\n❌ Translation validation failed:\n");
     errors.forEach((error) => console.error(error + "\n"));
+    throw Error("\n❌ Translation validation failed:\n");
   } else {
     console.log(
       "\n✅ All translations are complete and match the reference language.\n",
