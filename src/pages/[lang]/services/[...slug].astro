@@ -1,4 +1,5 @@
 ---
+import Service from "../../../components/pages/Service.astro";
 import Base from "../../../layouts/Base.astro";
 
 import { getCollection } from "astro:content";
@@ -13,6 +14,10 @@ export async function getStaticPaths() {
 
   return paths;
 }
+
+const { lang, slug } = Astro.params;
 ---
 
-<Base> Deutsche Detail-Page für Service x </Base>
+<Base>
+  <Service lang={lang} slug={slug} />
+</Base>

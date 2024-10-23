@@ -9,6 +9,7 @@ const blogCollection = defineCollection({
       imageAlt: z.string(),
       author: z.string(),
       date: z.date(),
+      tags: z.array(z.string()),
     }),
 });
 
@@ -23,6 +24,7 @@ export interface BlogPost {
   imageAlt: string;
   author: string;
   date: Date;
+  tags: string[];
 }
 
 const aboutCollection = defineCollection({
@@ -88,7 +90,7 @@ const servicesCollection = defineCollection({
         z.object({
           name: z.string(),
           description: z.string(),
-          experience: z.string(),
+          image: image(),
         }),
       ),
       image: image(),
@@ -96,15 +98,22 @@ const servicesCollection = defineCollection({
     }),
 });
 
+export interface Tech {
+  name: string;
+  description: string;
+  image: {
+    src: string;
+    width: number;
+    height: number;
+    format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+  };
+}
+
 export interface Service {
   slug: string;
   title: string;
   description: string;
-  tech: {
-    name: string;
-    description: string;
-    experience: string;
-  }[];
+  tech: Tech[];
   image: {
     src: string;
     width: number;

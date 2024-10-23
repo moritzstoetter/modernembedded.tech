@@ -64,14 +64,14 @@ export const labels = {
           "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
         cta: "Kontaktieren Sie uns",
       },
+      services: {
+        title: "Dienstleistungen und Services",
+        testimonials: "Was unsere Kunden sagen",
+      },
     },
     footer: {
       imprint: "Impressum",
       privacy: "Datenschutz",
-    },
-    services: {
-      title: "Dienstleistungen und Services",
-      testimonials: "Was unsere Kunden sagen",
     },
     caseStudies: {
       technologies: "Technologien",

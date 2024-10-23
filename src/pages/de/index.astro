@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import ServicePreview from "../../components/business/ServicePreview.astro";
 import Hero from "../../components/Hero.astro";
-import Service from "../../components/Service.astro";
 import Testimonial from "../../components/Testimonial.astro";
 import {
   getLangFromUrl,
@@ -26,13 +26,17 @@ const t = useTranslations(lang);
   <div class="flex flex-col gap-16 md:gap-24">
     <Hero />
     <section>
-      <h1>{t("services.title")}</h1>
+      <h1>{t("home.services.title")}</h1>
       <div class="flex flex-col gap-8">
-        {germanServices?.map((service) => <Service service={service.data} />)}
+        {
+          germanServices?.map((service) => (
+            <ServicePreview service={service.data} />
+          ))
+        }
       </div>
     </section>
     <section class="mb-16 md:mb-24">
-      <h1>{t("services.testimonials")}</h1>
+      <h1>{t("home.services.testimonials")}</h1>
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         {
           germanTestimonials?.map((testimonial) => (

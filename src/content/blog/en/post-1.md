@@ -4,6 +4,7 @@ author: "Moritz Stötter"
 date: 2023-10-06
 image: "../assets/cover.jpg" # https://docs.astro.build/en/guides/images/#images-in-content-collections
 imageAlt: "Computer with visible code editor"
+tags: ["programming", "dev-ops"]
 ---
 
 A bit of test text

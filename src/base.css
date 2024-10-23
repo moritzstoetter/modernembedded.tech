@@ -35,3 +35,7 @@ h3 {
 .button-primary {
   @apply w-fit rounded-lg bg-primaryLight px-8 py-4 text-white dark:bg-primaryDark;
 }
+
+p {
+  @apply text-lg;
+}

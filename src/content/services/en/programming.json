@@ -6,12 +6,12 @@
     {
       "name": "C++",
       "description": "C++ is one of the most widely used programming languages and is used for developing operating systems, drivers, and games.",
-      "experience": "Advanced"
+      "image": "../assets/tech/c++.svg"
     },
     {
       "name": "Python",
       "description": "Python is one of the most popular programming languages and is used for web development, data analysis, and artificial intelligence.",
-      "experience": "Advanced"
+      "image": "../assets/tech/python.svg"
     }
   ],
   "image": "../assets/programming.jpg",

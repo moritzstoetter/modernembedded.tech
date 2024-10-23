@@ -6,14 +6,14 @@
     {
       "name": "Docker",
       "description": "Docker ist eine Container-Plattform, die es Entwicklern ermöglicht, Anwendungen in isolierten Umgebungen auszuführen.",
-      "experience": "Advanced"
+      "image": "../assets/tech/docker.svg"
     },
     {
       "name": "Kubernetes",
       "description": "Kubernetes ist ein Open-Source-System zur Automatisierung der Bereitstellung, Skalierung und Verwaltung von Container-Anwendungen.",
-      "experience": "Advanced"
+      "image": "../assets/tech/kubernetes.svg"
     }
   ],
   "image": "../assets/dev-ops.jpg",
-  "tags": ["docker", "kubernetes", "devops"]
+  "tags": ["docker", "kubernetes", "dev-ops"]
 }
