@@ -3,12 +3,12 @@
     {
       "name": "Max Mustermann",
       "description": "Max Mustermann ist der Gründer und Geschäftsführer von Firma X. Er hat langjährige Erfahrung in der Softwareentwicklung und ist spezialisiert auf die Entwicklung von Webanwendungen und mobilen Anwendungen.",
-      "image": "max-mustermann.jpg"
+      "image": "../assets/max_mustermann.jpg"
     },
     {
       "name": "Erika Musterfrau",
       "description": "Erika Musterfrau ist die Leiterin des Entwicklungsteams bei Firma X. Sie hat umfangreiche Erfahrung in der Softwareentwicklung und ist spezialisiert auf die Entwicklung von Webanwendungen und mobilen Anwendungen.",
-      "image": "erika-musterfrau.jpg"
+      "image": "../assets/erika_musterfrau.jpg"
     }
   ]
 }

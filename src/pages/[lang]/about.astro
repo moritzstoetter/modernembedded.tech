@@ -1,7 +1,40 @@
 ---
-import Base from '../../layouts/Base.astro';
+import { getCollection } from "astro:content";
+import TeamMember from "../../components/business/TeamMember.astro";
+import {
+  getLangFromUrl,
+  idIsOfLanguage,
+  useTranslations,
+} from "../../i18n/utils";
+import Base from "../../layouts/Base.astro";
+
+const about = await getCollection("about");
+
+const lang = getLangFromUrl(Astro.url);
+
+const langAbout = about.find((a) => idIsOfLanguage(a.id, lang));
+
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+  const pages = await getCollection("about");
+
+  const paths = pages.map((page) => {
+    const [lang] = page.id.split("/");
+    return { params: { lang }, props: page };
+  });
+
+  return paths;
+}
 ---
 
 <Base>
-    Deutsch About Page
+  <h1>{t("about.title")}</h1>
+  <section class="flex flex-col gap-8 pb-8 mx-4 lg:mx-0">
+    <p>{t("about.description")}</p>
+    <h2>{t("about.team")}</h2>
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      {langAbout?.data.members.map((member) => <TeamMember member={member} />)}
+    </div>
+  </section>
 </Base>

@@ -41,17 +41,19 @@ const aboutCollection = defineCollection({
     }),
 });
 
+export interface TeamMember {
+  name: string;
+  description: string;
+  image: {
+    src: string;
+    width: number;
+    height: number;
+    format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+  };
+}
+
 export interface About {
-  members: {
-    name: string;
-    description: string;
-    image: {
-      src: string;
-      width: number;
-      height: number;
-      format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
-    };
-  }[];
+  members: TeamMember[];
 }
 
 const caseStudiesCollection = defineCollection({

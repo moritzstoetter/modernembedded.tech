@@ -19,12 +19,12 @@ const t = useTranslations(lang);
 
 {
   !!service ? (
-    <section class="flex flex-col gap-8 py-8" id={service.title}>
+    <section class="flex flex-col gap-8 py-8 mx-4 lg:md-0" id={service.title}>
       <div class="grid grid-cols-1 md:grid-cols-3">
         <div class="col-span-1">
           <Image src={service.image} alt={service.title} />
         </div>
-        <h1 class="flex items-center justify-center col-span-2 text-primaryLight dark:text-primaryDark">
+        <h1 class="flex items-center justify-center md:col-span-2 text-primaryLight dark:text-primaryDark">
           {service.title}
         </h1>
       </div>

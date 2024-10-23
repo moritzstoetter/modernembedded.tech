@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
 <Base>
   <h1>Blog posts</h1>
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+  <div class="grid grid-cols-1 gap-8 mx-4 md:grid-cols-2 lg:mx-0">
     {
       langBlogPosts.map((blogPost) => (
         <Box href={`/${lang}/blog/${blogPost.slug.split("/")[1]}`} padded>

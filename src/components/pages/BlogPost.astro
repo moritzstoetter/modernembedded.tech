@@ -26,7 +26,7 @@ const t = useTranslations(lang);
 
 {
   !!blogPost && !!rendering ? (
-    <article class="flex flex-col gap-4 px-4 pb-8 md:px-0">
+    <article class="flex flex-col gap-4 px-4 pb-8 mx-4 md:px-0 lg:mx-0">
       <h1>{blogPost.data.title}</h1>
       <Image src={blogPost.data.image} alt={blogPost.data.imageAlt} />
       <div class="pb-8 prose dark:prose-headings:text-textDark max-w-none lg:prose-xl">

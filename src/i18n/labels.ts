@@ -7,6 +7,12 @@ export const defaultLang = "de";
 
 export const labels = {
   en: {
+    about: {
+      title: "About Us",
+      team: "Team",
+      description:
+        "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
+    },
     nav: {
       home: "Home",
       caseStudies: "Case Studies",
@@ -45,9 +51,6 @@ export const labels = {
     blog: {
       notFound: "Blog Post not found",
     },
-    about: {
-      team: "Our Team",
-    },
     contact: {
       send: "Send",
       bookACall: "Book a call",
@@ -60,6 +63,12 @@ export const labels = {
     },
   },
   de: {
+    about: {
+      title: "Über uns",
+      team: "Unser Team",
+      description:
+        "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
+    },
     nav: {
       home: "Startseite",
       caseStudies: "Fallstudien",
@@ -97,9 +106,6 @@ export const labels = {
     },
     blog: {
       notFound: "Blog-Artikel nicht gefunden",
-    },
-    about: {
-      team: "Unser Team",
     },
     contact: {
       send: "Senden",
