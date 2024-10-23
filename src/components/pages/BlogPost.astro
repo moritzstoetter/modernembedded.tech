@@ -19,6 +19,7 @@ const rendering = await blogPost?.render();
 const relatedArticles = await findBlogpostsByTags(
   lang,
   blogPost?.data.tags ?? [],
+  slug,
 );
 
 const t = useTranslations(lang);
@@ -32,12 +33,17 @@ const t = useTranslations(lang);
       <div class="pb-8 prose dark:prose-headings:text-textDark max-w-none lg:prose-xl">
         <rendering.Content />
       </div>
-      <h2>{t("common.relatedBlogArticles")}</h2>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-        {relatedArticles.map((article) => (
-          <ArticlePreview article={article} />
-        ))}
-      </div>
+
+      {relatedArticles?.length > 0 && (
+        <>
+          <h2>{t("common.relatedBlogArticles")}</h2>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {relatedArticles.map((article) => (
+              <ArticlePreview article={article} />
+            ))}
+          </div>
+        </>
+      )}
     </article>
   ) : (
     <div>

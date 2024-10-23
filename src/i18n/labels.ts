@@ -121,7 +121,7 @@ export const labels = {
       message: "Nachricht",
     },
     common: {
-      relatedBlogArticles: "Ähnliche Blog-Artikel",
+      relatedBlogArticles: "Relevante Blog-Artikel",
     },
   },
 } as const;
