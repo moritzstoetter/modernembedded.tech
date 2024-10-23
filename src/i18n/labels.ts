@@ -22,17 +22,25 @@ export const labels = {
           "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
         cta: "Get in touch",
       },
+      services: {
+        title: "Services",
+        testimonials: "What our customers say",
+        notFound: "Service not found",
+      },
     },
     footer: {
       imprint: "Imprint",
       privacy: "Privacy Policy",
     },
-    services: {
-      title: "Services",
-      testimonials: "What our customers say",
-    },
     caseStudies: {
+      title: "Case Studies",
+      aboutTheClient: "About the client",
+      theChallenge: "The Challenge",
+      deliveredValue: "Delivered value",
+      theProduct: "The Product",
       technologies: "Technologies",
+      testimonial: "What the client says",
+      notFound: "Case Study not found",
     },
     about: {
       team: "Our Team",
@@ -67,6 +75,7 @@ export const labels = {
       services: {
         title: "Dienstleistungen und Services",
         testimonials: "Was unsere Kunden sagen",
+        notFound: "Dienstleistung nicht gefunden",
       },
     },
     footer: {
@@ -74,7 +83,14 @@ export const labels = {
       privacy: "Datenschutz",
     },
     caseStudies: {
+      title: "Fallstudien",
+      aboutTheClient: "Über den Kunden",
+      theChallenge: "Die Herausforderung",
+      deliveredValue: "Der Mehrwert",
+      theProduct: "Das Produkt",
       technologies: "Technologien",
+      testimonial: "Was der Kunde sagt",
+      notFound: "Fallstudie nicht gefunden",
     },
     about: {
       team: "Unser Team",

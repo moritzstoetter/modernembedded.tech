@@ -6,8 +6,8 @@ import Box from "../ui/Box.astro";
 const tech: Tech = Astro.props.technology;
 ---
 
-<Box>
-  <div class="grid items-center grid-cols-1 gap-4 p-8 md:grid-cols-3">
+<Box padded>
+  <div class="grid items-center grid-cols-1 gap-4 md:grid-cols-3">
     <Image class="col-span-1" src={tech.image} alt={tech.name ?? "bla"} />
     <div class="flex flex-col col-span-2">
       <h3 class="text-primaryLight dark:text-primaryDark">{tech.name}</h3>

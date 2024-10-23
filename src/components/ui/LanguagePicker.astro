@@ -2,19 +2,22 @@
 import { getLangFromUrl } from "../../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
+
+// get current path
+const path = Astro.url.pathname;
 ---
 
 <ul>
   {
     lang === "en" ? (
       <li>
-        <a class="text-lg" href="/de/">
+        <a class="text-lg" href={path.replace("/en/", "/de/")}>
           DE 🇩🇪
         </a>
       </li>
     ) : (
       <li>
-        <a class="text-lg" href="/en/">
+        <a class="text-lg" href={path.replace("/de/", "/en/")}>
           EN 🇬🇧
         </a>
       </li>

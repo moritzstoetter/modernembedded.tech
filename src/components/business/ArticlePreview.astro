@@ -6,8 +6,8 @@ import Box from "../ui/Box.astro";
 const article: BlogPost = Astro.props.article;
 ---
 
-<Box>
-  <div class="grid grid-cols-1 gap-4 p-8">
+<Box padded>
+  <div class="grid grid-cols-1 gap-4">
     <Image src={article.image} alt={article.imageAlt} />
     <h3>{article.title}</h3>
   </div>

@@ -56,19 +56,23 @@ export interface About {
 
 const caseStudiesCollection = defineCollection({
   type: "data",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    about: z.string(),
-    challenge: z.string(),
-    deliveredValue: z.string(),
-    product: z.string(),
-    tech: z.array(z.string()),
-    testimonials: z.array(z.number()),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      slug: z.string(),
+      title: z.string(),
+      description: z.string(),
+      about: z.string(),
+      challenge: z.string(),
+      deliveredValue: z.string(),
+      product: z.string(),
+      tech: z.array(z.string()),
+      testimonials: z.array(z.number()),
+      image: image(),
+    }),
 });
 
 export interface CaseStudy {
+  slug: string;
   title: string;
   description: string;
   about: string;
@@ -77,6 +81,12 @@ export interface CaseStudy {
   product: string;
   tech: string[];
   testimonials: number[];
+  image: {
+    src: string;
+    width: number;
+    height: number;
+    format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+  };
 }
 
 const servicesCollection = defineCollection({

@@ -1,19 +1,22 @@
 ---
-import { getCollection } from 'astro:content';
-import Base from '../../../layouts/Base.astro';
+import { getCollection } from "astro:content";
+import CaseStudy from "../../../components/pages/CaseStudy.astro";
+import Base from "../../../layouts/Base.astro";
 
 export async function getStaticPaths() {
-  const pages = await getCollection('case-studies');
+  const pages = await getCollection("case-studies");
 
-  const paths = pages.map(page => {
-    const [lang, ...slug] = page.id.split('/');
-    return { params: { lang, slug: slug.join('/') || undefined }, props: page };
+  const paths = pages.map((page) => {
+    const [lang, ...slug] = page.id.split("/");
+    return { params: { lang, slug: slug.join("/") || undefined }, props: page };
   });
 
   return paths;
 }
+
+const { lang, slug } = Astro.params;
 ---
 
 <Base>
-    Deutsche Detail-Page für Fallstudie x
+  <CaseStudy lang={lang} slug={slug} />
 </Base>

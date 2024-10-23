@@ -26,7 +26,7 @@ const t = useTranslations(lang);
         <div class="col-span-1">
           <Image src={service.image} alt={service.title} />
         </div>
-        <h1 class="col-span-2 text-center text-primaryLight dark:text-primaryDark">
+        <h1 class="flex items-center justify-center col-span-2 text-primaryLight dark:text-primaryDark">
           {service.title}
         </h1>
       </div>
@@ -45,7 +45,7 @@ const t = useTranslations(lang);
     </section>
   ) : (
     <div>
-      <h1>Service not found</h1>
+      <h1>{t("home.services.notFound")}</h1>
     </div>
   )
 }
