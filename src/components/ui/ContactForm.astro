@@ -1,0 +1,44 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = useTranslations(lang);
+---
+
+<div class="flex flex-col gap-8 pb-8 mx-4 lg:mx-0">
+  <h1>{t("contact.title")}</h1>
+  <form
+    class="flex flex-col gap-8"
+    method="post"
+    action="https://forms.un-static.com/forms/ed0c50b5ef1f373fa0cd56407c4347a6e6141beb"
+  >
+    <input
+      name="name"
+      placeholder={t("contact.name")}
+      type="text"
+      required="required"
+    />
+    <input
+      name="email"
+      placeholder={t("contact.email")}
+      type="text"
+      required="required"
+    />
+    <textarea
+      name="message"
+      placeholder={t("contact.message")}
+      cols="40"
+      rows="10"
+      required="required"></textarea>
+    <button class="button-primary" name="submit" type="submit"
+      >{t("contact.send")}</button
+    >
+  </form>
+  <p>{t("contact.bookACallDescription")}</p>
+  <a
+    href="https://calendly.com/moritzstoetter/30min"
+    target="_blank"
+    class="button-primary">{t("contact.bookACall")}</a
+  >
+</div>

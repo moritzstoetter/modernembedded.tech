@@ -33,9 +33,14 @@ h3 {
 }
 
 .button-primary {
-  @apply w-fit rounded-lg bg-primaryLight px-8 py-4 text-white dark:bg-primaryDark;
+  @apply w-full rounded-lg bg-primaryLight px-8 py-4 text-center text-white md:w-fit md:text-left dark:bg-primaryDark;
 }
 
 p {
   @apply text-lg;
+}
+
+textarea,
+input {
+  @apply rounded-lg bg-white px-4 py-2 text-lg dark:bg-backgroundDarker;
 }

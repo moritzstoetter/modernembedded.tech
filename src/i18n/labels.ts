@@ -52,8 +52,11 @@ export const labels = {
       notFound: "Blog Post not found",
     },
     contact: {
+      title: "Contact",
       send: "Send",
       bookACall: "Book a call",
+      bookACallDescription:
+        "If you would like to schedule a non-binding consultation, you can make an appointment here.",
       name: "Name",
       email: "Email",
       message: "Message",
@@ -108,8 +111,11 @@ export const labels = {
       notFound: "Blog-Artikel nicht gefunden",
     },
     contact: {
+      title: "Kontakt",
       send: "Senden",
       bookACall: "Termin vereinbaren",
+      bookACallDescription:
+        "Falls sie ein unverbindliches Beratungsgespräch wünschen, können Sie hier einen Termin vereinbaren.",
       name: "Name",
       email: "E-Mail",
       message: "Nachricht",
