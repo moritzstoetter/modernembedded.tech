@@ -42,6 +42,9 @@ export const labels = {
       testimonial: "What the client says",
       notFound: "Case Study not found",
     },
+    blog: {
+      notFound: "Blog Post not found",
+    },
     about: {
       team: "Our Team",
     },
@@ -91,6 +94,9 @@ export const labels = {
       technologies: "Technologien",
       testimonial: "Was der Kunde sagt",
       notFound: "Fallstudie nicht gefunden",
+    },
+    blog: {
+      notFound: "Blog-Artikel nicht gefunden",
     },
     about: {
       team: "Unser Team",

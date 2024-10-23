@@ -14,8 +14,6 @@ const service = services.find((s) => s.id === `${lang}/${slug}`)?.data;
 
 const relatedArticles = await findBlogpostsByTags(lang, service?.tags ?? []);
 
-console.dir({ service, relatedArticles }, { depth: "Infinity" });
-
 const t = useTranslations(lang);
 ---
 
