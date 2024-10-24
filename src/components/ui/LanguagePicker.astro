@@ -12,13 +12,13 @@ const path = Astro.url.pathname;
     lang === "en" ? (
       <li>
         <a class="text-lg" href={path.replace("/en/", "/de/")}>
-          DE 🇩🇪
+          DE
         </a>
       </li>
     ) : (
       <li>
         <a class="text-lg" href={path.replace("/de/", "/en/")}>
-          EN 🇬🇧
+          EN
         </a>
       </li>
     )

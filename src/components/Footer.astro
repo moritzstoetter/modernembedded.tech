@@ -12,7 +12,7 @@ const t = useTranslations(lang);
     <a
       class={`${
         Astro.url.pathname === `/${lang}/imprint`
-          ? "text-secondaryLight dark:text-secondaryDark"
+          ? "text-primaryLight dark:text-primaryDark"
           : ""
       }`}
       href={`/${lang}/imprint`}>{t("footer.imprint")}</a
@@ -20,7 +20,7 @@ const t = useTranslations(lang);
     <a
       class={`${
         Astro.url.pathname === `/${lang}/privacy`
-          ? "text-secondaryLight dark:text-secondaryDark"
+          ? "text-primaryLight dark:text-primaryDark"
           : ""
       }`}
       href={`/${lang}/privacy`}>{t("footer.privacy")}</a
