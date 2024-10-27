@@ -33,7 +33,7 @@ h3 {
 }
 
 .button-primary {
-  @apply w-full px-8 py-4 text-center text-white rounded-lg bg-primaryLight hover:bg-primaryLight/80 md:w-fit md:text-left dark:bg-primaryDark hover:dark:bg-primaryDark/80;
+  @apply w-full px-8 py-4 text-center text-white transition-colors duration-300 rounded-lg bg-primaryLight hover:bg-primaryLight/80 md:w-fit md:text-left dark:bg-primaryDark hover:dark:bg-primaryDark/80;
 }
 
 p {
@@ -42,5 +42,5 @@ p {
 
 textarea,
 input {
-  @apply px-4 py-2 text-lg bg-white rounded-lg hover:bg-neutral-100 focus:bg-primaryLight/5 dark:bg-backgroundDarker;
+  @apply px-4 py-2 text-lg bg-white rounded-lg hover:bg-neutral-100 focus:bg-primaryLight/5 dark:bg-backgroundDark hover:dark:bg-backgroundDark/80;
 }

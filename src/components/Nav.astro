@@ -11,7 +11,7 @@ const t = useTranslations(lang);
 ---
 
 <div
-  class="sticky z-50 flex flex-col px-8 py-6 mx-4 mt-8 border-2 lg:mx-0 bg-white/40 backdrop-blur-md top-4 dark:bg-backgroundDark/80 rounded-[39px] border-primaryLight/10 dark:border-neutral-700">
+  class="sticky z-50 flex flex-col px-8 py-6 mx-4 mt-8 border-2 lg:mx-0 bg-white/50 backdrop-blur-md top-4 dark:bg-backgroundDarker/80 rounded-[39px] border-primaryLight/10 dark:border-neutral-700">
   <div class="flex items-center justify-between">
     <a href="/">
       <Image
@@ -32,19 +32,30 @@ const t = useTranslations(lang);
       <ThemeIcon />
     </div>
   </div>
-  <div id="mobile-menu" class="hidden mt-4 md:hidden">
-    <NavList alignment="vertical" />
+  <div
+    id="mobile-menu"
+    class="overflow-hidden transition-[height] duration-300 ease-in-out h-0 md:hidden">
+    <div class="py-4" id="mobile-menu-content">
+      <NavList alignment="vertical" />
+    </div>
   </div>
 </div>
 
 <script>
   let mobileMenuOpen = false;
   const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuContent = document.getElementById("mobile-menu-content");
 
   document.addEventListener("toggleMenu", () => {
     mobileMenuOpen = !mobileMenuOpen;
-    if (mobileMenu) {
-      mobileMenu.classList.toggle("hidden", !mobileMenuOpen);
+    if (mobileMenu && mobileMenuContent) {
+      const contentHeight = mobileMenuContent.getBoundingClientRect().height;
+
+      if (mobileMenuOpen) {
+        mobileMenu.style.height = `${contentHeight}px`;
+      } else {
+        mobileMenu.style.height = "0px";
+      }
     }
   });
 </script>

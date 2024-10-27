@@ -14,7 +14,7 @@ export default {
         greenDark: "#79740e",
         greenLight: "#b8bb26",
         backgroundLight: "#EFEDEA",
-        backgroundDark: "#3C3836",
+        backgroundDark: "#2F2F2F",
         backgroundDarker: "#282828",
         textLight: "#3c3836",
         textDark: "#F9F5D7",

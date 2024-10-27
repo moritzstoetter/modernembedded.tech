@@ -2,7 +2,9 @@
 const { href, padded } = Astro.props;
 
 const className = [
-  "bg-white border dark:bg-backgroundDarker rounded-3xl border-primaryLight/10 dark:border-neutral-700/40 shadow-sm dark:shadow-md hover:shadow-md dark:hover:shadow-xl transition duration-300 hover:bg-neutral-100 dark:hover:bg-backgroundDarker/80",
+  "bg-white dark:bg-backgroundDark rounded-3xl shadow-sm dark:shadow-md",
+  href &&
+    "hover:bg-neutral-100 hover:shadow-md dark:hover:bg-backgroundDark/80  dark:hover:shadow-xl transition duration-300",
   padded && "p-8",
 ]
   .filter(Boolean)
