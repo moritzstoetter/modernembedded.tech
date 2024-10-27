@@ -21,7 +21,7 @@ h6 {
 }
 
 h1 {
-  @apply my-8 text-center text-2xl font-bold uppercase sm:text-3xl md:my-16 lg:text-4xl;
+  @apply my-8 text-2xl font-bold text-center uppercase sm:text-3xl md:my-16 lg:text-4xl;
 }
 
 h2 {
@@ -33,7 +33,7 @@ h3 {
 }
 
 .button-primary {
-  @apply w-full rounded-lg bg-primaryLight px-8 py-4 text-center text-white md:w-fit md:text-left dark:bg-primaryDark;
+  @apply w-full px-8 py-4 text-center text-white rounded-lg bg-primaryLight hover:bg-primaryLight/80 md:w-fit md:text-left dark:bg-primaryDark hover:dark:bg-primaryDark/80;
 }
 
 p {
@@ -42,5 +42,5 @@ p {
 
 textarea,
 input {
-  @apply rounded-lg bg-white px-4 py-2 text-lg dark:bg-backgroundDarker;
+  @apply px-4 py-2 text-lg bg-white rounded-lg hover:bg-neutral-100 focus:bg-primaryLight/5 dark:bg-backgroundDarker;
 }
