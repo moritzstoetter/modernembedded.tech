@@ -21,14 +21,18 @@ const langTestimonials = testimonials.filter((t) => idIsOfLanguage(t.id, lang));
 const t = useTranslations(lang);
 
 export async function getStaticPaths() {
-  const pages = await getCollection("services");
-
-  const paths = pages.map((page) => {
-    const [lang] = page.id.split("/");
-    return { params: { lang }, props: page };
-  });
-
-  return paths;
+  return [
+    {
+      params: {
+        lang: "de",
+      },
+    },
+    {
+      params: {
+        lang: "en",
+      },
+    },
+  ];
 }
 ---
 

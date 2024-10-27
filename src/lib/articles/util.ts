@@ -9,12 +9,6 @@ export const findBlogpostsByTags = async (
 ) => {
   const blogPosts = await getCollection("blog");
 
-  console.log({
-    filtered: blogPosts.filter(
-      (post) => post.slug.split("/")[1] !== excludeSlug,
-    ),
-  });
-
   // filter by language and tags and sort by date, pick first 3 max results
   return blogPosts
     .filter((post) =>
