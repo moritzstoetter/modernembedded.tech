@@ -7,6 +7,6 @@
   "deliveredValue": "Our software solution has enabled Client 1 to optimize its business processes and increase efficiency. This allowed the company to save time and resources and strengthen its competitiveness.",
   "product": "Our software solution for Client 1 includes various modules that enable the company to efficiently manage its business processes. These include an order and inventory management system, a customer management system, and a reporting system.",
   "tech": ["Python", "C++", "Django", "React"],
-  "testimonials": [1, 2],
+  "testimonials": [1, 2, 3, 4],
   "image": "../assets/case-study-1.jpg"
 }

@@ -7,6 +7,6 @@
   "deliveredValue": "Unsere Softwarelösung hat es Kunde 1 ermöglicht, seine Geschäftsprozesse zu optimieren und die Effizienz zu steigern. Das Unternehmen konnte dadurch Zeit und Ressourcen sparen und seine Wettbewerbsfähigkeit stärken.",
   "product": "Unsere Softwarelösung für Kunde 1 umfasst verschiedene Module, die es dem Unternehmen ermöglichen, seine Geschäftsprozesse effizient zu verwalten. Dazu gehören ein Bestellungs- und Lagerverwaltungssystem, ein Kundenverwaltungssystem und ein Berichterstellungssystem.",
   "tech": ["Python", "C++", "Django", "React"],
-  "testimonials": [1, 2],
+  "testimonials": [1, 2, 3, 4],
   "image": "../assets/case-study-1.jpg"
 }
