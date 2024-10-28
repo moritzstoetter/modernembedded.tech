@@ -11,15 +11,26 @@ const t = useTranslations(lang);
 ---
 
 <div
-  class="sticky z-50 flex flex-col px-8 py-6 mx-4 mt-8 border-2 lg:mx-0 bg-white/50 backdrop-blur-md top-4 dark:bg-backgroundDarker/80 rounded-[39px] border-primaryLight/10 dark:border-neutral-700">
+  class="sticky z-50 flex flex-col px-8 py-6 mx-4 mt-8 border-2 lg:mx-0 bg-white/50 backdrop-blur-md top-4 dark:bg-backgroundDarker/80 rounded-[39px] border-primaryLight/10 dark:border-neutral-700"
+>
   <div class="flex items-center justify-between">
     <a href="/">
-      <Image
-        width={32}
-        height={32}
-        src="/logo.png"
-        alt="moritz stötter website logo"
-      />
+      <div class="block dark:hidden">
+        <Image
+          width={32}
+          height={32}
+          src="/logo_light.png"
+          alt="moritz stötter website logo"
+        />
+      </div>
+      <div class="hidden dark:block">
+        <Image
+          width={32}
+          height={32}
+          src="/logo_dark.png"
+          alt="moritz stötter website logo"
+        />
+      </div>
     </a>
     <div class="flex items-center gap-4">
       <div class="hidden md:block">
@@ -34,7 +45,8 @@ const t = useTranslations(lang);
   </div>
   <div
     id="mobile-menu"
-    class="overflow-hidden transition-[height] duration-300 ease-in-out h-0 md:hidden">
+    class="overflow-hidden transition-[height] duration-300 ease-in-out h-0 md:hidden"
+  >
     <div class="py-4" id="mobile-menu-content">
       <NavList alignment="vertical" />
     </div>
