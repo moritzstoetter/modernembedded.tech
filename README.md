@@ -159,3 +159,13 @@ For example a file under `/pages/[lang]/hello.astro` will create two routes (one
 - `/pages/en/hello`
 
 and fill the routes accordingly. As we use translations from our i18n module everywhere, we only need to create one "real" page and Astro utils take care of rendering both languages there depending on the `lang` prop it provides.
+
+## Tailwind Configuration
+
+All the styling in this project is done with [Tailwind](https://tailwindcss.com/docs/installation) styling. As you can see in all components, this means you have clearly defined util classes that are being used everywhere. If you want to edit stylings yourself, I suggest you get familiar with the most used ones by reading the Tailwind documentation. Also be aware that Tailwind strips out all _unused_ util classes on compile, so our compiled css stylesheet is smaller.
+
+### Customization
+
+Some elements of Tailwind have been overwritten for this project. You can find all customizations in `tailwind.config.js` which are mostly colors, as well as sane standards for the `prose` Tailwind keyword which is used in the blog post components. See details about Prose Tailwind here: [https://github.com/tailwindlabs/tailwindcss-typography](https://github.com/tailwindlabs/tailwindcss-typography).
+
+There are also some standard customizations for HTML elements in general, which you can find in `base.css`. All stylings can be overwritten by adding other classes to a specific element, so if you need to overwrite the standard set in that file, just overwrite them on the element you want to customize.
