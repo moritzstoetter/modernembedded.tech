@@ -1,3 +1,5 @@
+@import "./fonts.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,8 +8,7 @@ p,
 span,
 div,
 ul,
-li,
-a {
+li {
   @apply text-textLight dark:text-textDark;
 }
 
@@ -18,6 +19,20 @@ h4,
 h5,
 h6 {
   @apply text-textLight dark:text-textDark;
+  font-family: "Montserrat", sans-serif, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+p,
+span,
+label,
+div,
+ul,
+li,
+button,
+a {
+  font-family: "Open Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 h1 {
@@ -33,7 +48,11 @@ h3 {
 }
 
 .button-primary {
-  @apply w-full rounded-lg bg-primaryLight px-8 py-4 text-center text-white transition-colors duration-300 hover:bg-primaryLight/80 md:w-fit md:text-left dark:bg-primaryDark hover:dark:bg-primaryDark/80;
+  @apply w-full rounded-lg border-2 border-transparent bg-primaryLight px-8 py-4 text-center text-white transition-colors duration-300 hover:bg-primaryLight/80 focus:border-white focus:outline-none md:w-fit md:text-left dark:bg-primaryDark hover:dark:bg-primaryDark/80;
+}
+
+.focused-link {
+  @apply border-2 border-transparent text-primaryLight outline-none focus:border-primaryLight dark:text-primaryDark dark:focus:border-primaryDark;
 }
 
 p {
@@ -42,5 +61,5 @@ p {
 
 textarea,
 input {
-  @apply rounded-lg bg-white px-4 py-2 text-lg hover:bg-neutral-100 focus:bg-primaryLight/5 dark:bg-backgroundDark hover:dark:bg-backgroundDark/80;
+  @apply rounded-lg border-2 border-transparent bg-white px-4 py-2 text-lg hover:bg-neutral-100 focus:border-primaryLight focus:bg-primaryLight/5 focus:outline-none dark:bg-backgroundDark hover:dark:bg-backgroundDark/80 dark:focus:border-primaryDark focus:dark:bg-neutral-800;
 }

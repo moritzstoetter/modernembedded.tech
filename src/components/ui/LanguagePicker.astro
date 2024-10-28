@@ -35,15 +35,18 @@ const path = Astro.url.pathname;
 
   <div
     id="language-dropdown"
-    class="hidden absolute right-0 mt-2 bg-white/80 backdrop-blur-md dark:bg-backgroundDark rounded-lg shadow-lg py-2 min-w-[140px]">
+    class="hidden absolute right-0 mt-2 bg-white/80 backdrop-blur-md dark:bg-backgroundDark rounded-lg shadow-lg py-2 min-w-[140px]"
+  >
     <a
       href={path.replace(`/${lang}/`, "/en/")}
-      class="block px-4 py-2 text-textLight dark:text-textDark hover:bg-backgroundLight/50 hover:dark:bg-backgroundLight/5 hover:font-semibold">
+      class="block px-4 py-2 text-textLight dark:text-textDark hover:bg-backgroundLight/50 hover:dark:bg-backgroundLight/5 hover:font-semibold"
+    >
       English
     </a>
     <a
       href={path.replace(`/${lang}/`, "/de/")}
-      class="block px-4 py-2 text-textLight dark:text-textDark hover:bg-backgroundLight/50 hover:dark:bg-backgroundLight/5 hover:font-semibold">
+      class="block px-4 py-2 text-textLight dark:text-textDark hover:bg-backgroundLight/50 hover:dark:bg-backgroundLight/5 hover:font-semibold"
+    >
       Deutsch
     </a>
   </div>

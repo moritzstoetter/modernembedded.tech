@@ -169,3 +169,5 @@ All the styling in this project is done with [Tailwind](https://tailwindcss.com/
 Some elements of Tailwind have been overwritten for this project. You can find all customizations in `tailwind.config.js` which are mostly colors, as well as sane standards for the `prose` Tailwind keyword which is used in the blog post components. See details about Prose Tailwind here: [https://github.com/tailwindlabs/tailwindcss-typography](https://github.com/tailwindlabs/tailwindcss-typography).
 
 There are also some standard customizations for HTML elements in general, which you can find in `base.css`. All stylings can be overwritten by adding other classes to a specific element, so if you need to overwrite the standard set in that file, just overwrite them on the element you want to customize.
+
+In `fonts.css` there are all imports for local fonts (found in `/public/fonts` folder). You can swap these out for others by changing the font-family's defined here. You will need to add other woff files to the /public/fonts folder as well. See `base.css` for how they were set on all the elements used in the pages.

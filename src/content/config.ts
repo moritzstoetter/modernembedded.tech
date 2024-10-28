@@ -141,6 +141,7 @@ const testimonialsCollection = defineCollection({
     z.object({
       identifier: z.number(),
       name: z.string(),
+      subheading: z.string(),
       quote: z.string(),
       image: image(),
     }),
@@ -149,6 +150,7 @@ const testimonialsCollection = defineCollection({
 export interface Testimonial {
   identifier: number;
   name: string;
+  subheading: string;
   quote: string;
   image: {
     src: string;

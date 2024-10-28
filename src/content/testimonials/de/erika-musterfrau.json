@@ -1,6 +1,7 @@
 {
   "identifier": 1,
   "name": "Max Mustermann",
+  "subheading": "CTO @ CompanyX GmbH",
   "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   "image": "../assets/max_mustermann.jpg"
 }

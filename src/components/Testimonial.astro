@@ -8,14 +8,19 @@ const testimonial: Testimonial = Astro.props.testimonial;
 
 <Box padded>
   <div class="flex flex-col gap-8">
-    <p>{testimonial.quote}</p>
+    <p class="italic">"{testimonial.quote}"</p>
     <div class="flex flex-row items-center gap-4">
       <Image
         src={testimonial.image}
         alt={testimonial.name}
-        class="flex-grow-0 flex-shrink-0 object-cover w-8 h-8 rounded-sm"
+        class="flex-grow-0 flex-shrink-0 object-cover w-12 h-12 rounded-full"
       />
-      <p>{testimonial.name}</p>
+      <div class="flex flex-col gap-1">
+        <p>{testimonial.name}</p>
+        <p class="text-xs text-textLight/50 dark:text-textDark/50">
+          {testimonial.subheading}
+        </p>
+      </div>
     </div>
   </div>
 </Box>

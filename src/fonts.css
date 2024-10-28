@@ -1,0 +1,69 @@
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/opensans/open-sans-v40-latin-regular.woff2") format("woff2");
+}
+/* open-sans-italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/opensans/open-sans-v40-latin-italic.woff2") format("woff2");
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/opensans/open-sans-v40-latin-700.woff2") format("woff2");
+}
+/* open-sans-700italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/opensans/open-sans-v40-latin-700italic.woff2")
+    format("woff2");
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/montserrat/montserrat-v26-latin-regular.woff2")
+    format("woff2");
+}
+/* montserrat-italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/montserrat/montserrat-v26-latin-italic.woff2")
+    format("woff2");
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/montserrat/montserrat-v26-latin-700.woff2") format("woff2");
+}
+/* montserrat-700italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/fonts/montserrat/montserrat-v26-latin-700italic.woff2")
+    format("woff2");
+}
