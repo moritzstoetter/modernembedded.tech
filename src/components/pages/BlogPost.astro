@@ -33,6 +33,7 @@ const t = useTranslations(lang);
       <div class="pb-8 prose dark:prose-headings:text-textDark max-w-none lg:prose-xl">
         <rendering.Content />
       </div>
+      <h6>{blogPost.data.date.toISOString().slice(0,10)}</h6>
 
       {relatedArticles?.length > 0 && (
         <>

@@ -36,7 +36,7 @@ const t = useTranslations(lang);
       <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
         <Box padded>
           <div class="flex flex-col gap-4">
-            <h2 class="text-primaryLight darK:text-primaryDark">
+            <h2 class="text-primaryLight dark:text-primaryDark">
               {t("caseStudies.aboutTheClient")}
             </h2>
             <p>{caseStudy.about}</p>
@@ -45,7 +45,7 @@ const t = useTranslations(lang);
         <div class="col-span-1" />
         <Box padded>
           <div class="flex flex-col gap-4">
-            <h2 class="text-primaryLight darK:text-primaryDark">
+            <h2 class="text-primaryLight dark:text-primaryDark">
               {t("caseStudies.theChallenge")}
             </h2>
             <p>{caseStudy.challenge}</p>
@@ -53,7 +53,7 @@ const t = useTranslations(lang);
         </Box>
         <Box padded>
           <div class="flex flex-col gap-4">
-            <h2 class="text-primaryLight darK:text-primaryDark">
+            <h2 class="text-primaryLight dark:text-primaryDark">
               {t("caseStudies.deliveredValue")}
             </h2>
             <p>{caseStudy.deliveredValue}</p>
@@ -62,7 +62,7 @@ const t = useTranslations(lang);
       </div>
       <Box padded>
         <div class="flex flex-col gap-4">
-          <h2 class="text-primaryLight darK:text-primaryDark">
+          <h2 class="text-primaryLight dark:text-primaryDark">
             {t("caseStudies.theProduct")}
           </h2>
           <p>{caseStudy.product}</p>
@@ -76,8 +76,12 @@ const t = useTranslations(lang);
           ))}
         </ul>
       </div>
-      <h2>{t("caseStudies.testimonial")}</h2>
-      <TestimonialSlider testimonials={langTestimonials} />
+      {langTestimonials?.length > 0 && (
+        <>
+          <h2>{t("caseStudies.testimonial")}</h2>
+          <TestimonialSlider testimonials={langTestimonials} />
+        </>
+      )}
     </section>
   ) : (
     <div>

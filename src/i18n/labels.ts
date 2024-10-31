@@ -11,25 +11,25 @@ export const labels = {
       title: "About Us",
       team: "Team",
       description:
-        "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
+        "We at modern embedded have devoted ourselves to applying the highest quality standards to software solutions for embedded devices. We achieve this by employing cutting edge technology and tools, that have proven themselves as gold standards for their specific application. Modularity and malleability are guiding principles in our work.",
     },
     nav: {
-      home: "Home",
+      home: "Services",
       caseStudies: "Case Studies",
-      services: "Services",
+      // services: "Services",
       blog: "Blog",
       about: "About",
       contact: "Contact",
     },
     home: {
       hero: {
-        title: "We build digital products",
+        title: "Your partner for embedded excellence",
         subtitle:
-          "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
+          "We help you beat the competition with a product that is outstanding to the core.",
         cta: "Get in touch",
       },
       services: {
-        title: "Services",
+        title: "Our Services",
         testimonials: "What our customers say",
         notFound: "Service not found",
       },
@@ -46,7 +46,7 @@ export const labels = {
       theProduct: "The Product",
       technologies: "Technologies",
       testimonial: "What the client says",
-      notFound: "Case Study not found",
+      notFound: "Case study not found",
     },
     blog: {
       notFound: "Blog Post not found",
@@ -70,25 +70,25 @@ export const labels = {
       title: "Über uns",
       team: "Unser Team",
       description:
-        "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
+        "Wir von modern embedded haben uns der Anwendung höchster Qualitätsansprüche für Softwarelösungen im Embeddedbereich verschrieben. Das erreichen wir durch den Einsatz der modernsten Technologien und Werkzeugen, die sich jeweils als Goldstandard für ihren jeweiligen Anwendungsfall etabliert haben. Modularität und Formbarkeit sind Leitprizipien unserer Arbeit.",
     },
     nav: {
-      home: "Startseite",
+      home: "Leistungen",
       caseStudies: "Fallstudien",
-      services: "Leistungen",
+      // services: "Leistungen",
       blog: "Blog",
       about: "Über uns",
       contact: "Kontakt",
     },
     home: {
       hero: {
-        title: "Wir entwickeln digitale Produkte",
+        title: "Ihr Partner für eingebettete Exzellenz",
         subtitle:
-          "Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.",
+          "Wir helfen Ihnen die Konkurrenz zu schlagen, mit einem herausragenden Produkt - bis in den Kern.",
         cta: "Kontaktieren Sie uns",
       },
       services: {
-        title: "Dienstleistungen und Services",
+        title: "Unsere Dienstleistungen",
         testimonials: "Was unsere Kunden sagen",
         notFound: "Dienstleistung nicht gefunden",
       },
@@ -121,7 +121,7 @@ export const labels = {
       message: "Nachricht",
     },
     common: {
-      relatedBlogArticles: "Relevante Blog-Artikel",
+      relatedBlogArticles: "Verwandte Blogartikel",
     },
   },
 } as const;
