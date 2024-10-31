@@ -16,8 +16,7 @@ const totalSlides = testimonials.length;
       totalSlides > 1 && (
         <button class="w-12 h-12 caret-left">
           <svg
-            fill="currentColor"
-            class="w-full h-full"
+            class="w-full h-full fill-textLight dark:fill-textDark"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -46,8 +45,7 @@ const totalSlides = testimonials.length;
       totalSlides > 1 && (
         <button class="w-12 h-12 caret-right">
           <svg
-            fill="currentColor"
-            class="w-full h-full"
+            class="w-full h-full fill-textLight dark:fill-textDark"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -64,8 +62,7 @@ const totalSlides = testimonials.length;
       totalSlides > 3 && (
         <button class="caret-left lg:w-12 lg:h-12">
           <svg
-            fill="currentColor"
-            class="w-full h-full"
+            class="w-full h-full fill-textLight dark:fill-textDark"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -94,8 +91,7 @@ const totalSlides = testimonials.length;
       totalSlides > 3 && (
         <button class="lg:w-12 lg:h-12 caret-right">
           <svg
-            fill="currentColor"
-            class="w-full h-full"
+            class="w-full h-full fill-textLight dark:fill-textDark"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
           >
@@ -108,6 +104,8 @@ const totalSlides = testimonials.length;
 </div>
 
 <script>
+  const interval_ms = 8000;
+
   let currentIndexMobile = 0;
   let currentIndexDesktop = 0;
 
@@ -147,14 +145,14 @@ const totalSlides = testimonials.length;
     if (mobileSlides > 1) {
       setInterval(() => {
         updateIndexMobile(currentIndexMobile + 1);
-      }, 4000);
+      }, interval_ms);
     }
 
     // Automatic sliding for desktop
     if (desktopSlides > 3) {
       setInterval(() => {
         updateIndexDesktop(currentIndexDesktop + 1);
-      }, 4000);
+      }, interval_ms);
     }
 
     // Handlers for manual sliding

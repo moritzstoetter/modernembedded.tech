@@ -6,7 +6,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="relative flex flex-col p-8 items-end">
+<div class="relative flex flex-col p-0 items-end">
   <a href={`/${lang}/contact`} class="button-primary">
     {t("home.hero.cta")}
   </a>

@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import hero from "../assets/hero.png";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import ContactButton from "./ContactButton.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -9,7 +10,7 @@ const t = useTranslations(lang);
 
 <section
   id="hero"
-  class="relative grid items-center grid-cols-1 mt-4 md:mt-16 md:grid-cols-2 overflow-hidden rounded-2xl"
+  class="relative grid items-center grid-cols-1 mt-4 md:mt-16 md:grid-cols-2 overflow-hidden rounded-3xl"
 >
   <!-- Background Image Container -->
   <div class="absolute inset-0 w-full h-full">
@@ -21,14 +22,12 @@ const t = useTranslations(lang);
   </div>
   
   <!-- Content Container with background overlay for better text readability -->
-  <div class="relative z-10 flex flex-col bg-white/75 dark:bg-black/75 p-8">
+  <div class="relative z-10 flex flex-col  bg-white/75 dark:bg-black/75 p-8">
     <h1 class="text-start text-primaryLight dark:text-primaryDark">
       {t("home.hero.title")}
     </h1>
     <p class="pb-8">{t("home.hero.subtitle")}</p>
-    <a href={`/${lang}/contact`} class="button-primary">
-      {t("home.hero.cta")}
-    </a>
+    <ContactButton/>
   </div>
   <div class="hidden md:block"> <!-- Empty div to maintain grid layout --> </div>
 </section>

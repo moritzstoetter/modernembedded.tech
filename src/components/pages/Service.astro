@@ -5,7 +5,7 @@ import { useTranslations } from "../../i18n/utils";
 import { findBlogpostsByTags } from "../../lib/articles/util";
 import ArticlePreview from "../business/ArticlePreview.astro";
 import Technology from "../business/Technology.astro";
-import QuickContact from "../QuickContact.astro"
+import ContactButton from "../ContactButton.astro"
 
 const { lang, slug } = Astro.props;
 
@@ -40,7 +40,7 @@ const t = useTranslations(lang);
           <Technology technology={technology} />
         ))}
       </div>
-      <QuickContact/>
+      <ContactButton/>
       <h2>{t("common.relatedBlogArticles")}</h2>
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         {relatedArticles.map((article) => (

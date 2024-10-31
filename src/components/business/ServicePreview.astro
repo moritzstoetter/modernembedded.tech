@@ -22,11 +22,7 @@ const lang = getLangFromUrl(Astro.url);
     
     {/* Content Grid */}
     <div class="relative h-full grid grid-cols-1 md:grid-cols-2">
-      {/* Left side - empty to show image */}
-      <div></div>
-      
-      {/* Right side - content with semi-transparent background */}
-      <div class="flex flex-col gap-4 px-4 py-8 bg-white/80 dark:bg-black/80">
+      <div class="flex flex-col justify-between gap-4 px-8 py-8 bg-white/75 dark:bg-black/75 md:col-start-2">
         <h2 class="text-primaryLight dark:text-primaryDark">{service.title}</h2>
         <p>{service.description}</p>
       </div>
