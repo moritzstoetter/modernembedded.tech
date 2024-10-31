@@ -1,7 +1,7 @@
 {
   "slug": "a_development",
   "title": "Software Development",
-  "description": "We develop software solutions that are tailored to your use case. Our specialty are embedded systems, including specifically microcontrollers. Here you can learn a little about our tech stack.",
+  "description": "We develop software solutions that are tailored to your use case. Our specialty are embedded systems, specifically including microcontrollers. Here you can learn a little about our tech stack.",
   "tech": [ 
     {
       "name": "C++",
@@ -44,7 +44,7 @@
       "image": "../assets/tech/espressif.svg"
     },
     {
-      "name": "Bluetoth",
+      "name": "Bluetooth",
       "description": "We develop your Bluetooth interface. Be it Classic, Low Energy or LE Audio, we know all the standards.",
       "image": "../assets/tech/bluetooth.png"
     },

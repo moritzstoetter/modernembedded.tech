@@ -7,6 +7,12 @@ const member: TeamMember = Astro.props.member;
 ---
 
 <Box padded>
-    <Image class="w-full rounded-full max-w-40 float-right px-3" src={member.image} alt={member.name} />
+    <div class="flex flex-col md:flex-row items-center gap-4">
+    <Image
+      class="w-full rounded-full max-w-60 px-3"
+      src={member.image}
+      alt={member.name}
+    />
     <p class="">{member.description}</p>
+  </div>
 </Box>

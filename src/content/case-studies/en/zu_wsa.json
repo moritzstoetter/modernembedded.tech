@@ -1,7 +1,7 @@
 {
   "slug": "zu_wsa",
   "title": "BLE Audio Testing Framework",
-  "description": "The world's third largest manufacturer of hearing aids, tests its devices with technology, that we developed according to cutting edge standards.",
+  "description": "The world's third largest manufacturer of hearing aids, tests its devices with technology, that we developed.",
   "about": "WS Audiology is a multi-national company, that develops, manufactures and distributes hearing aids under a range of brands. With roughly 12000 employees and locations in Germany, Denmark and Singapore, WSA is a true heavy weight in the hearing aid sector.",
   "challenge": "Our client wanted to perform automatic integration tests for the brand new BLE Audio Standard on their devices. The project received a lot of attention from the management right from the start, and proved itself time and time again.",
   "deliveredValue": "We wanted to quickly reach a high test coverage, while at the same time providing an excellent product that will be useful long-term. To achieve this we implemented a modular and malleable software architecture, that allowed us to develop the entire system iteratively. When th requirements changed fundamentally about half way of the project, we were in an excellent position to react.",

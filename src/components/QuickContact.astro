@@ -1,0 +1,13 @@
+---
+import Box from "./ui/Box.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="relative flex flex-col p-8 items-end">
+  <a href={`/${lang}/contact`} class="button-primary">
+    {t("home.hero.cta")}
+  </a>
+</div>

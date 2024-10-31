@@ -1,7 +1,7 @@
 {
   "slug": "zu_wsa",
   "title": "BLE Audio Testframework",
-  "description": "Mit von uns nach modernsten Standards entwickelter Technologie testet der drittgrößte Hörgerätehersteller der Welt seine Hörgeräte.",
+  "description": "Mit von uns entwickelter Technologie testet der drittgrößte Hörgerätehersteller der Welt seine Hörgeräte.",
   "about": "WS Audiology ist ein multinationaler Konzern, der Hörgeräte entwickelt, produziert und unter einer Reihe von Marken vertreibt, entstanden aus dem Zusammenschluss der Sivantos GmbH (ehemals Siemens) und Widex. Mit etwa 12000 Mitarbeitern und verteilt über Standorte in Deutschland, Dänemark und Singapur ist WSA ein echtes Schwergewicht im Hörgeratesektor.",
   "challenge": "Unser Kunde wollte automatisierte Integrationstests für den brandneuen BLE Audio Standard auf seinen Geräten durchführen. Das Projekt genoss von Anfang an viel Beachtung vom Management und bewies sich immer wieder aufs Neue.",
   "deliveredValue": "Wir wollten sowohl schnell eine hohe Testabdeckung erreichen, als auch ein langfristig nützliches und technologisch exzellentes Produkt abliefern. Um das zu erreichen haben wir von Beginn an auf modulare, formbare Softwarearchitektur gesetzt, die es uns ermöglicht hat, das ganze System iterativ zu verbessern. Als sich zur Mitte des Projektes hin die Anforderungen fundamental geändert haben, waren wir damit in einer hervorragenden Position zu reagieren.",

@@ -5,6 +5,7 @@ import { useTranslations } from "../../i18n/utils";
 import { findBlogpostsByTags } from "../../lib/articles/util";
 import ArticlePreview from "../business/ArticlePreview.astro";
 import Technology from "../business/Technology.astro";
+import QuickContact from "../QuickContact.astro"
 
 const { lang, slug } = Astro.props;
 
@@ -20,11 +21,16 @@ const t = useTranslations(lang);
 {
   !!service ? (
     <section class="flex flex-col gap-8 py-8 mx-4 lg:md-0" id={service.title}>
-      <div class="grid grid-cols-1 md:grid-cols-3">
-        <div class="col-span-1">
-          <Image src={service.image} alt={service.title} />
+      <div class="relative h-64 -mx-4 overflow-hidden flex items-center">
+        <div class="absolute inset-0">
+          <Image 
+            src={service.image} 
+            alt={service.title} 
+            class="w-full h-full object-cover" 
+          />
         </div>
-        <h1 class="flex items-center justify-center md:col-span-2 text-primaryLight dark:text-primaryDark">
+        <div class="absolute inset-0 bg-white/75 dark:bg-black/75"></div>
+        <h1 class="relative z-10 w-full text-center text-primaryLight dark:text-primaryDark">
           {service.title}
         </h1>
       </div>
@@ -34,6 +40,7 @@ const t = useTranslations(lang);
           <Technology technology={technology} />
         ))}
       </div>
+      <QuickContact/>
       <h2>{t("common.relatedBlogArticles")}</h2>
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         {relatedArticles.map((article) => (
@@ -46,4 +53,4 @@ const t = useTranslations(lang);
       <h1>{t("home.services.notFound")}</h1>
     </div>
   )
-}
+ }
