@@ -4,7 +4,7 @@ author: "Moritz Stötter"
 date: 2023-12-09
 image: "../assets/tree.png" # https://docs.astro.build/en/guides/images/#images-in-content-collections
 imageAlt: "order from chaos"
-tags: ["development", "consulting", "cpp"]
+tags: ["development", "cpp"]
 ---
 
 
@@ -44,23 +44,24 @@ Now in contrast consider the following code snippet, that does the same thing bu
 std::vector<int> prices = {10, 20, 30, 40, 50};
 
 auto total = prices 
-    | std::views::filter([](int price) { return price > 20; })
-    | std::views::transform([](int price) { return price * 0.9; })
-    | std::ranges::fold_left(0.0, std::plus<>());
+           | std::views::filter([](int price) { return price > 20; })
+           | std::views::transform([](int price) { return price * 0.9; })
+           | std::ranges::fold_left(0.0, std::plus<>{});
 ```
 
-Regardless of wether you are familiar with C++20's ranges library, I am confident that you can read these four lines and directly understand what is happening. This is just way more expressive than the previous snippet, and thus makes it easier to reason about the code and spot potential bugs. As an added benefit this approach also eliminates or reduces the chance of some bugs, e.g. off-by-one errors and boundary mistakes. And there is more: Each operation is isolated and composable, making the code easier to test and modify. 
+Regardless of wether you are familiar with C++20's ranges library, I am confident that you can read these four lines and directly understand what is happening. This is just way more expressive than the previous snippet, and thus easier to reason about and spot potential bugs. In fact this approach directly eliminates or reduces the chance of some bugs, e.g. off-by-one errors and boundary mistakes. And there is more: Each operation is isolated and composable, making the code easier to test and modify. 
 
 ### Abstraction: Hiding Complexity, Revealing Intent 
 
-The gist of this transformation is that the operations have been extracted from the concrete application and condensed into *filter*, *transform* and *fold_left* in an abstract and generic form. Now they can be applied to all kinds of use cases.  This allows us to encapsulate complex operations behind simple interfaces. By doing so, we reduce the amount of code that needs to be read, understood, and maintained at any given time. A well-designed abstraction hides implementation details while clearly communicating intent. And with careful use of this technique this comes at no runtime cost (*zero-cost-abstraction*).
+The gist of of the difference between these code snippets though is that the operations have been extracted from the concrete application and condensed into *filter*, *transform* and *fold_left* in an abstract and generic form. Now these can be applied to all kinds of use cases. In this fashion complex operations are encapsulated behind simple interfaces and in doing so, we reduce the amount of code that needs to be read, understood, and maintained at any given time. A well-designed abstraction hides implementation details while clearly communicating intent. And with careful implementation this comes at no runtime cost (*zero-cost-abstraction*).
 
 ### The Compounding Benefits 
 
 As we embrace abstractions and strive for more expressive code, we reap compounding benefits: 
 
 **Reduced Cognitive Load**: Developers can focus on high-level logic rather than low-level implementation details. 
-Improved Maintainability: With less code and clearer intent, future modifications become easier and less error-prone. 
+
+**Improved Maintainability**: With less code and clearer intent, future modifications become easier and less error-prone. 
 
 **Enhanced Collaboration**: Code that clearly expresses its intent facilitates better teamwork and knowledge sharing. 
 

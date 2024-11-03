@@ -16,7 +16,6 @@ export const labels = {
     nav: {
       home: "Services",
       caseStudies: "Case Studies",
-      // services: "Services",
       blog: "Blog",
       about: "About",
       contact: "Contact",
@@ -70,12 +69,11 @@ export const labels = {
       title: "Über uns",
       team: "Unser Team",
       description:
-        "Wir von modern embedded haben uns der Anwendung höchster Qualitätsansprüche für Softwarelösungen im Embeddedbereich verschrieben. Das erreichen wir durch den Einsatz der modernsten Technologien und Werkzeugen, die sich jeweils als Goldstandard für ihren jeweiligen Anwendungsfall etabliert haben. Modularität und Formbarkeit sind Leitprizipien unserer Arbeit.",
+        "Wir von modern embedded haben uns der Anwendung höchster Qualitätsansprüche für Softwarelösungen im Embeddedbereich verschrieben. Das erreichen wir durch den Einsatz der modernsten Technologien und Werkzeugen, die sich jeweils als Goldstandard für ihren jeweiligen Anwendungsfall etabliert haben. Modularität und Formbarkeit sind Leitprinzipien unserer Arbeit.",
     },
     nav: {
       home: "Leistungen",
       caseStudies: "Fallstudien",
-      // services: "Leistungen",
       blog: "Blog",
       about: "Über uns",
       contact: "Kontakt",

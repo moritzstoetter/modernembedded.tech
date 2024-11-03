@@ -4,7 +4,7 @@ author: "Moritz Stötter"
 date: 2023-12-09
 image: "../assets/tree.png" # https://docs.astro.build/en/guides/images/#images-in-content-collections
 imageAlt: "rooted"
-tags: ["development", "consulting", "cpp"]
+tags: ["development", "cpp"]
 ---
 
 
