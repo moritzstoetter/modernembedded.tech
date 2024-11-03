@@ -15,7 +15,7 @@ export default defineConfig({
       prefixDefaultLocale: true,
     },
   },
-  site: "https://www.moritzstoetter.github.io/",
+  site: "https://moritzstoetter.github.io/",
   markdown: {
     shikiConfig: {
       themes: {
