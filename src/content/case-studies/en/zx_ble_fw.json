@@ -8,5 +8,5 @@
   "product": "Firmware development for the Nordic-Semiconductor SoC nRF52832 — Zephyr RTOS based — Bluetooth Low Energy based communication: Advertising, connection handling, error handling, services — Custom bluetooth services for broadcasting real-time sensor values — Development of a custom driver for the ADC nau7802, implementing all its functionalities as per the datasheet provided by the manufacturer; testing and verification via oscilloscope — Over-the-air device firmware upgrade capabilities implemented for software updates in the field — Programming and debugging via SWD",
   "tech": ["Embedded C", "BLE", "I2C", "Nordic Semiconductor", "nRF Connect","ARM Cortex-M"],
   "testimonials": [],
-  "image": "../assets/pf_01_1.webp"
+  "image": "../assets/climb_smart.png"
 }

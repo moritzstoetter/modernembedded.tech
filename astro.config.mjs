@@ -15,5 +15,15 @@ export default defineConfig({
       prefixDefaultLocale: true,
     },
   },
-  site: "https://www.moritzstoetter.dev/modernembedded.tech/",
+  site: "https://www.moritzstoetter.github.io/",
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+      wrap: true,
+      transformers: [],
+    },
+  },
 });

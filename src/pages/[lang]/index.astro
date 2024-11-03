@@ -41,7 +41,7 @@ export async function getStaticPaths() {
     <Hero />
     <section>
       <h1>{t("home.services.title")}</h1>
-      <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-16">
         {
           langServices?.map((service) => (
             <ServicePreview service={service.data} />

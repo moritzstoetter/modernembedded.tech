@@ -12,11 +12,9 @@ export const findBlogpostsByTags = async (
   // filter by language and tags and sort by date, pick first 3 max results
   return blogPosts
     .filter((post) =>
-      !!excludeSlug
-        ? post.slug.split("/")[1] !== excludeSlug
-        : true &&
-          idIsOfLanguage(post.id, lang) &&
-          tags.some((tag) => post.data.tags.includes(tag)),
+      (!!excludeSlug ? post.slug.split("/")[1] !== excludeSlug : true) &&
+      idIsOfLanguage(post.id, lang) &&
+      tags.some((tag) => post.data.tags.includes(tag)),
     )
     .sort((a, b) =>
       isBefore(new Date(a.data.date), new Date(b.data.date)) ? 1 : -1,

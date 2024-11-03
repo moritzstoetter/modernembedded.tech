@@ -40,12 +40,12 @@ export const labels = {
     },
     caseStudies: {
       title: "Case Studies",
-      aboutTheClient: "About the client",
+      aboutTheClient: "About the Client",
       theChallenge: "The Challenge",
-      deliveredValue: "Delivered value",
+      deliveredValue: "Delivered Value",
       theProduct: "The Product",
       technologies: "Technologies",
-      testimonial: "What the client says",
+      testimonial: "What the Client Says",
       notFound: "Case study not found",
     },
     blog: {

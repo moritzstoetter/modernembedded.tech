@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -9,15 +11,20 @@ export default {
         primaryDark: "#d79921",
         secondaryLight: "#cc241d  ",
         secondaryDark: "#fabd2f",
-        redDark: "#fb4934",
-        redLight: "#cc241d",
-        greenDark: "#79740e",
-        greenLight: "#b8bb26",
+        // redDark: "#fb4934",
+        // redLight: "#cc241d",
+        // greenDark: "#79740e",
+        // greenLight: "#b8bb26",
         backgroundLight: "#EFEDEA",
         backgroundDark: "#2F2F2F",
         backgroundDarker: "#282828",
         textLight: "#3c3836",
         textDark: "#F9F5D7",
+      },
+      fontFamily: {
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        mono: ['ui-monospace', ...defaultTheme.fontFamily.mono],
+        body: ['OpenSans', defaultTheme.fontFamily.body],
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -48,10 +55,6 @@ export default {
             h2: { color: theme("colors.textDark") },
             h3: { color: theme("colors.textDark") },
             strong: { color: theme("colors.textDark") },
-            blockquote: {
-              color: theme("colors.textDark"),
-              borderLeftColor: theme("colors.primaryDark"),
-            },
           },
         },
       }),

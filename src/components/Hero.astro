@@ -23,10 +23,10 @@ const t = useTranslations(lang);
   
   <!-- Content Container with background overlay for better text readability -->
   <div class="relative z-10 flex flex-col  bg-white/75 dark:bg-black/75 p-8">
-    <h1 class="text-start text-primaryLight dark:text-primaryDark">
+    <h1 class="text-start sm:text-4xl lg:text-5xl text-primaryLight dark:text-primaryDark">
       {t("home.hero.title")}
     </h1>
-    <p class="pb-8">{t("home.hero.subtitle")}</p>
+    <h3 class="pb-8">{t("home.hero.subtitle")}</h3>
     <ContactButton/>
   </div>
   <div class="hidden md:block"> <!-- Empty div to maintain grid layout --> </div>

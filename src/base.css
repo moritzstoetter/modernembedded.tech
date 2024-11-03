@@ -12,17 +12,6 @@ li {
   @apply text-textLight dark:text-textDark;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply text-textLight dark:text-textDark;
-  font-family: "Montserrat", sans-serif, ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 p,
 h3,
 h4,
@@ -31,17 +20,6 @@ h6 {
   @apply break-words hyphens-auto;
 }
 
-p,
-span,
-label,
-div,
-ul,
-li,
-button,
-a {
-  font-family: "Open Sans", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
 
 h1 {
   @apply my-8 text-center text-2xl font-bold uppercase sm:text-3xl md:my-16 lg:text-4xl;
@@ -56,7 +34,7 @@ h3 {
 }
 
 .button-primary {
-  @apply w-full rounded-lg border-2 border-transparent bg-primaryLight px-8 py-4 text-center text-white transition-colors duration-300 hover:bg-primaryLight/80 focus:border-white focus:outline-none md:w-fit md:text-left dark:bg-primaryDark hover:dark:bg-primaryDark/80;
+  @apply w-full rounded-full border-2 border-transparent bg-primaryLight px-8 py-4 text-center text-white transition-colors duration-300 hover:bg-primaryLight/80 focus:border-white focus:outline-none md:w-fit md:text-left dark:bg-primaryDark hover:dark:bg-primaryDark/80;
 }
 
 .focused-link {
@@ -72,6 +50,20 @@ input {
   @apply rounded-lg border-2 border-transparent bg-white px-4 py-2 text-lg hover:bg-neutral-100 focus:border-primaryLight focus:bg-primaryLight/5 focus:outline-none dark:bg-backgroundDark hover:dark:bg-backgroundDark/80 dark:focus:border-primaryDark focus:dark:bg-neutral-800;
 }
 
-.button-primary {
-  @apply rounded-full;
+html.light .astro-code,
+html.light .astro-code span {
+  color: var(--shiki-light) !important;
+  background-color: var(--shiki-light-bg) !important;
+  font-style: var(--shiki-light-font-style) !important;
+  font-weight: var(--shiki-light-font-weight) !important;
+  text-decoration: var(--shiki-light-text-decoration) !important;
+}
+
+html.dark .astro-code,
+html.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
 }
