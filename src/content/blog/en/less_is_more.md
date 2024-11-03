@@ -24,14 +24,14 @@ Consider, for example, the following piece of code:
 std::vector<int> prices = {10, 20, 30, 40, 50};
 std::vector<double> discounted_prices;
 
-for(size_t i = 0; i < prices.size(); i++) {
-    if(prices[i] > 20) {
+for (size_t i = 0; i < prices.size(); i++) {
+    if (prices[i] > 20) {
         discounted_prices.push_back(prices[i] * 0.9);
     }
 }
 
 double total = 0;
-for(size_t i = 0; i < discounted_prices.size(); i++) {
+for (size_t i = 0; i < discounted_prices.size(); i++) {
     total += discounted_prices[i];
 }
 ```

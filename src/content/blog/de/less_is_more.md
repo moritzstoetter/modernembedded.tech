@@ -8,11 +8,11 @@ tags: ["development", "cpp"]
 ---
 
 
-In der Welt der Softwareentwicklung bleibt eine paradoxe Wahrheit oft unerkannt: **jede Zeile Code, die wir schreiben, ist nicht nur ein Werkzeug, sondern auch eine Belastung**. Diese Erkenntnis ist der Grund, warum Abstraktionen und Ausdrucksstärke im Code nicht nur vorteilhaft, sondern für die Erstellung robuster, wartbarer Softwaresysteme unerlässlich sind, insbesondere wenn die Komplexität zunimmt.
+In der Welt der Softwareentwicklung gibt es eine ungeliebte Wahrheit: **jede Zeile Code, die wir kreieren, ist niemals nur ein Fortschritt, sondern auch immer eine Belastung**. Diese Ambivalenz ist der Grund, warum Abstraktionen und Ausdrucksstärke im Code nicht nur vorteilhaft, sondern für die Erstellung robuster, wartbarer Softwaresysteme unerlässlich sind, insbesondere wenn die Komplexität zunimmt.
 
 ### Das zweischneidige Schwert von Programmcode
 
-Der Code, den wir schreiben, dient einem Zweck, der Lösung eines Problems oder der Implementierung einer Funktion. Jede Zeile stellt jedoch auch eine potenzielle Quelle für Fehler, Missverständnisse und zukünftige Wartungsprobleme dar. Je größer die Codebasis wird, desto größer wird auch die Belastung, in Hinblick auf Verständnis, Fehlersuche und die Änderungen. Hier kommt die Macht der Abstraktion und des ausdrucksstarken Codes ins Spiel. 
+Der Code, den wir schreiben, dient einem Zweck. Das kann die Lösung eines Problems oder der Implementierung einer Funktion seine. Gleichzeitig stellt jede Zeile jedoch auch eine potenzielle Quelle für Fehler, Missverständnisse und zukünftige Wartungsprobleme dar. Je größer die Codebasis wird, desto größer wird auch die Belastung, in Hinblick auf Verständnis, Fehlersuche und notwendige Änderungen. Hier kommt die Macht der Abstraktion und des ausdrucksstarken Codes ins Spiel. 
 
 ### Verzicht auf manuelle Schleifen
 
@@ -20,20 +20,18 @@ Ein Programmierparadigma in dieser Richtung, das von dem großartigen Sean Paren
 
 Betrachten Sie zum Beispiel das folgende Stück Code:
 
-Übersetzt mit DeepL.com (kostenlose Version)
-
 ```cpp
 std::vector<int> prices = {10, 20, 30, 40, 50};
 std::vector<double> discounted_prices;
 
-for(size_t i = 0; i < prices.size(); i++) {
+for (size_t i = 0; i < prices.size(); i++) {
     if(prices[i] > 20) {
         discounted_prices.push_back(prices[i] * 0.9);
     }
 }
 
 double total = 0;
-for(size_t i = 0; i < discounted_prices.size(); i++) {
+for (size_t i = 0; i < discounted_prices.size(); i++) {
     total += discounted_prices[i];
 }
 ```

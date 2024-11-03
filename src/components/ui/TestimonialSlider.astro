@@ -77,7 +77,7 @@ const totalSlides = testimonials.length;
         style={`transform: translateX(-${(100 / 3) * currentIndexDesktop}%)`}
       >
         {
-          testimonials.map((testimonial: any, index: number) => (
+          testimonials.reverse().map((testimonial: any, index: number) => (
             <div
               class={`px-4 slide ${index === currentIndexDesktop ? "active" : ""} flex-none w-1/3`}
             >
