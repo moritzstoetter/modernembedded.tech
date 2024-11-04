@@ -5,6 +5,7 @@ import { useTranslations } from "../../i18n/utils";
 import Box from "../ui/Box.astro";
 import Tag from "../ui/Tag.astro";
 import TestimonialSlider from "../ui/TestimonialSlider.astro";
+import BoxGrid from "../ui/BoxGrid.astro";
 
 const { lang, slug } = Astro.props;
 
@@ -27,7 +28,7 @@ const t = useTranslations(lang);
       <h1 class="flex items-center justify-center col-span-2">
         {caseStudy.title}
       </h1>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <BoxGrid narrow>
         <Box padded>
           <div class="flex flex-col gap-4">
             <h2 class="text-primaryLight dark:text-primaryDark">
@@ -36,13 +37,15 @@ const t = useTranslations(lang);
             <p>{caseStudy.about}</p>
           </div>
         </Box>
-        <div class="col-span-1 rounded-3xl overflow-hidden">
+        <Box>
+          <div class="overflow-hidden h-full w-full rounded-3xl">
           <Image
             src={caseStudy.image}
             alt={caseStudy.title}
             class="w-full h-full object-cover inset-0"
           />
-        </div>
+          </div>
+        </Box>
         {/* <div class="col-span-1" /> */}
         <Box padded>
           <div class="flex flex-col gap-4">
@@ -60,8 +63,7 @@ const t = useTranslations(lang);
             <p>{caseStudy.deliveredValue}</p>
           </div>
         </Box>
-      </div>
-      <Box padded>
+      <Box padded customClass="col-span-2">
         <div class="flex flex-col gap-4">
           <h2 class="text-primaryLight dark:text-primaryDark">
             {t("caseStudies.theProduct")}
@@ -69,6 +71,7 @@ const t = useTranslations(lang);
           <p>{caseStudy.product}</p>
         </div>
       </Box>
+      </BoxGrid>
       <div class="flex flex-row items-center gap-4">
         <span class="text-2xl">{t("caseStudies.technologies")}</span>
         <ul class="flex flex-row flex-wrap gap-4">

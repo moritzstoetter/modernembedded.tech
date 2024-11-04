@@ -1,0 +1,31 @@
+---
+import Box from "../../components/ui/Box.astro";
+import BoxGrid from "../../components/ui/BoxGrid.astro";
+import Base from "../../layouts/Base.astro";
+---
+
+<Base>
+  <h1>Imprint</h1>
+  <BoxGrid narrow>
+    <Box padded>
+        <h3 class="pb-4">Information in accordance with § 5 DDG</h3>
+        <p>
+          Moritz Stötter<br >Software Developer<br />Krottenkopfstr. 1<br />81377 München
+        </p>
+    </Box>
+    <Box padded>
+      <h3 class="pb-4">Contact</h3>
+      <p>Telefon: +49 (0)151 2304 8794<br />Email: info@modernembedded.tech</p>
+    </Box>
+    <Box padded>
+      <h3 class="pb-4">Professional Liability Insurance</h3>
+      <p>exali AG<br />Franz-Kobinger-Str. 9<br />86157 Augsburg</p>
+    </Box>
+    <Box padded>
+      <h3 class="pb-4">Legal</h3>
+      <p>
+        We are neither willing nor required to participate in consumer settlement processes.
+      </p>
+    </Box>
+  </BoxGrid>
+</Base>

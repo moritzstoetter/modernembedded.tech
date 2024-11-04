@@ -8,6 +8,7 @@ import {
   useTranslations,
 } from "../../i18n/utils";
 import Base from "../../layouts/Base.astro";
+import BoxGrid from "../../components/ui/BoxGrid.astro";
 import ArticlePreview from "../../components/business/ArticlePreview.astro";
 
 const blogPosts = await getCollection("blog");
@@ -31,7 +32,7 @@ export async function getStaticPaths() {
 
 <Base>
   <h1>Blog posts</h1>
-  <div class="grid grid-cols-1 gap-16 mx-4 md:grid-cols-2 lg:mx-0">
-    {langBlogPosts.map((blogPost) => <ArticlePreview article={blogPost}/>)}
-  </div>
+  <BoxGrid wide>
+    {langBlogPosts.map((blogPost) => <ArticlePreview article={blogPost} />)}
+  </BoxGrid>
 </Base>
