@@ -1,7 +1,7 @@
 {
   "slug": "c01_climbsmart",
   "title": "BLE Device Firmware",
-  "description": "We developed a custom tailored firmware solution for a Bluetooth Low Energy device in a matter of months.",
+  "description": "Our firmware transmits real-time sensor data via Bluetooth Low Energy.",
   "about": "Climb Smart GmbH is a young and athletic startup, that develops novel, digital training devices for climbers.",
   "challenge": "The customer was looking for a solution to collect force sensor measurements, digitize them and distribute them via Bluetooth Low Energy to user devices.",
   "deliveredValue": "Closely coordinating with the customer we developed a solution, that caters exactly to his needs. Our implementation greatly surpassed that of the competition, which gave our customer an important competitive edge.",

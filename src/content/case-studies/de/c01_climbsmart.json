@@ -1,7 +1,7 @@
 {
   "slug": "c01_climbsmart",
   "title": "BLE Gerätefirmware",
-  "description": "Wir haben eine, nach Kundenwunsch maßgeschneiderte, Firmware für ein Bluetooth Low Energy Gerät entwickelt, in wenigen Monaten.",
+  "description": "Unsere Firmware verschickt Echtzeitmessdaten via Bluetooth Low Energy.",
   "about": "Die Climb Smart GmbH ist ein junges und sportliches Startup, das neuartige, digitale Trainingsgeräte für Kletterer entwickelt.",
   "challenge": "Der Kunde suchte nach einer Lösung gesucht Kraftmesswerte in Echtzeit aufzunehmen, zu digitalisieren und per Bluetooth Low Energy an Endgeräte zu verteilen. Wir hatten hier völlig freie Hand in der Umsetzung und durften das Produkt mitgestalten.",
   "deliveredValue": "Wir haben in enger Abstimmung mit dem Kunden eine Lösung erarbeitet, die genau auf seine Bedürfnisse zugeschnitten ist, und die Konkurrenz in jeder Hinsicht um ein Vielfaches übertraf. Das hat der Climb Smart GmbH entscheidende Wettbewerbsvorteile verschafft.",
