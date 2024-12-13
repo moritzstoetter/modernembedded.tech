@@ -56,7 +56,7 @@ const totalSlides = testimonials.length;
     function updateIndex(newIndex: number) {
       console.log("slide_count " + slides.length + ", updateIndex " + newIndex);
 
-      const slideWidth = slides[0].offsetWidth;
+      const slideWidth = (slides[0] as HTMLElement).offsetWidth;
       const slidesElement = document.querySelector(".slides") as HTMLElement;
       if (slidesElement) {
         const containerWidth = slidesElement.parentElement?.offsetWidth || 0;
