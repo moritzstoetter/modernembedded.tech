@@ -5,16 +5,37 @@ import Testimonial from "../../components/Testimonial.astro";
 const testimonials = Astro.props.testimonials;
 
 let currentIndexMobile = 0;
+let currentIndexMedium = 0;
 let currentIndexDesktop = 0;
 const totalSlides = testimonials.length;
 ---
 
 <div class="relative slider-wrapper">
   <!-- Mobile Slider -->
-  <div class="flex items-center w-full gap-2 lg:hidden">
+  <div class="hidden sm:flex md:hidden items-center w-full gap-2">
+    <div class="flex-1 overflow-hidden slider-container">
+      <div
+        class="flex transition-transform duration-500 slides"
+        style={`transform: translateX(-${100 * currentIndexMobile}%)`}
+      >
+        {
+          testimonials.map((testimonial: any, index: number) => (
+            <div
+              class={`px-4 slide ${index === currentIndexMobile ? "active" : ""} flex-none w-full`}
+            >
+              <Testimonial testimonial={testimonial.data} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Medium Slider -->
+  <div class="hidden md:flex lg:hidden items-center w-full gap-2">
     {
       totalSlides > 1 && (
-        <button class="w-12 h-12 caret-left">
+        <button class="caret-left w-12 h-12">
           <svg
             class="w-full h-full fill-textLight dark:fill-textDark"
             xmlns="http://www.w3.org/2000/svg"
@@ -28,12 +49,12 @@ const totalSlides = testimonials.length;
     <div class="flex-1 overflow-hidden slider-container">
       <div
         class="flex transition-transform duration-500 slides"
-        style={`transform: translateX(-${100 * currentIndexMobile}%)`}
+        style={`transform: translateX(-${100 * currentIndexMedium}%)`}
       >
         {
           testimonials.map((testimonial: any, index: number) => (
             <div
-              class={`px-4 slide ${index === currentIndexMobile ? "active" : ""} flex-none w-full`}
+              class={`px-4 slide ${index === currentIndexMedium ? "active" : ""} flex-none w-full`}
             >
               <Testimonial testimonial={testimonial.data} />
             </div>
@@ -57,7 +78,7 @@ const totalSlides = testimonials.length;
   </div>
 
   <!-- Desktop Slider -->
-  <div class="items-center hidden gap-2 lg:flex w-full">
+  <div class="hidden lg:flex items-center w-full gap-2">
     {
       totalSlides > 3 && (
         <button class="caret-left lg:w-12 lg:h-12">
@@ -107,23 +128,36 @@ const totalSlides = testimonials.length;
   const interval_ms = 12000;
 
   let currentIndexMobile = 0;
+  let currentIndexMedium = 0;
   let currentIndexDesktop = 0;
 
   document.addEventListener("DOMContentLoaded", () => {
     const mobileSlides = document.querySelectorAll(
-      ".lg\\:hidden .slide",
+      ".sm\\:hidden .slide",
     ).length;
-    const desktopSlides = document.querySelectorAll(
-      ".hidden.lg\\:flex .slide",
+    const mediumSlides = document.querySelectorAll(
+      ".sm\\:flex.md\\:hidden .slide",
     ).length;
+    const desktopSlides = document.querySelectorAll(".lg\\:flex .slide").length;
 
     function updateIndexMobile(newIndex: number) {
       currentIndexMobile = (newIndex + mobileSlides) % mobileSlides;
       const slidesElement = document.querySelector(
-        ".lg\\:hidden .slides",
+        ".hidden.sm\\:flex.md\\:hidden .slides"
       ) as HTMLElement;
       if (slidesElement) {
         slidesElement.style.transform = `translateX(-${100 * currentIndexMobile}%)`;
+      }
+    }
+
+    // Add medium device update function
+    function updateIndexMedium(newIndex: number) {
+      currentIndexMedium = (newIndex + mediumSlides) % mediumSlides;
+      const slidesElement = document.querySelector(
+        ".hidden.md\\:flex .slides",
+      ) as HTMLElement;
+      if (slidesElement) {
+        slidesElement.style.transform = `translateX(-${100 * currentIndexMedium}%)`;
       }
     }
 
@@ -148,6 +182,13 @@ const totalSlides = testimonials.length;
       }, interval_ms);
     }
 
+    // Add auto-sliding for medium devices
+    if (mediumSlides > 1) {
+      setInterval(() => {
+        updateIndexMedium(currentIndexMedium + 1);
+      }, interval_ms);
+    }
+
     // Automatic sliding for desktop
     if (desktopSlides > 3) {
       setInterval(() => {
@@ -156,20 +197,34 @@ const totalSlides = testimonials.length;
     }
 
     // Handlers for manual sliding
-    if (mobileSlides > 1) {
-      const leftButtonMobile = document.querySelector(
-        ".lg\\:hidden .caret-left",
+    // if (mobileSlides > 1) {
+    //   const leftButtonMobile = document.querySelector(".caret-left");
+    //   const rightButtonMobile = document.querySelector(".caret-right");
+
+    //   leftButtonMobile?.addEventListener("click", () => {
+    //     updateIndexMobile(currentIndexMobile - 1);
+    //   });
+
+    //   rightButtonMobile?.addEventListener("click", () => {
+    //     updateIndexMobile(currentIndexMobile + 1);
+    //   });
+    // }
+
+    // Add click handlers for medium device buttons
+    if (mediumSlides > 1) {
+      const leftButtonMedium = document.querySelector(
+        ".hidden.md\\:flex .caret-left",
       );
-      const rightButtonMobile = document.querySelector(
-        ".lg\\:hidden .caret-right",
+      const rightButtonMedium = document.querySelector(
+        ".hidden.md\\:flex .caret-right",
       );
 
-      leftButtonMobile?.addEventListener("click", () => {
-        updateIndexMobile(currentIndexMobile - 1);
+      leftButtonMedium?.addEventListener("click", () => {
+        updateIndexMedium(currentIndexMedium - 1);
       });
 
-      rightButtonMobile?.addEventListener("click", () => {
-        updateIndexMobile(currentIndexMobile + 1);
+      rightButtonMedium?.addEventListener("click", () => {
+        updateIndexMedium(currentIndexMedium + 1);
       });
     }
 
